@@ -1,9 +1,44 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electronics",
+      "subcategories": [
+        {
+          "id": 101,
+          "name": "Phones",
+          "catalogs": [
+            {
+              "id": 1001,
+              "name": "Smartphones",
+              "products": [
+                { "id": 1, "name": "iPhone 14", "price": 999 },
+                { "id": 2, "name": "Samsung Galaxy S23", "price": 899 }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Home Appliances",
+      "subcategories": [
+        {
+          "id": 201,
+          "name": "Kitchen",
+          "catalogs": [
+            {
+              "id": 2001,
+              "name": "Microwaves",
+              "products": [
+                { "id": 3, "name": "LG Microwave", "price": 120 },
+                { "id": 4, "name": "Samsung Microwave", "price": 150 }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
