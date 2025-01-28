@@ -9,22 +9,209 @@
           "name": "Tops",
           "catalogs": [
             {
-              "id": 1001,
-              "name": "Summer Collection",
-              "products": [
+              "catalogs": [
                 {
-                  "id": 1,
-                  "name": "Cotton T-Shirt",
-                  "price": 20,
-                  "size": "M",
-                  "color": "White"
+                  "id": 1001,
+                  "name": "Summer Essentials",
+                  "products": [
+                    {
+                      "id": 1,
+                      "name": "Cotton T-Shirt",
+                      "price": 20,
+                      "sizes": ["S", "M", "L", "XL"],
+                      "colors": ["White", "Black"],
+                      "stock": {
+                        "White": { "S": 10, "M": 15, "L": 20, "XL": 5 },
+                        "Black": { "S": 8, "M": 12, "L": 18, "XL": 6 }
+                      },
+                      "total_stock": 86,
+                      "total_sold": 50,
+                      "images": {
+                        "White": [
+                          "placeholder-white1.jpg",
+                          "placeholder-white2.jpg"
+                        ],
+                        "Black": [
+                          "placeholder-black1.jpg",
+                          "placeholder-black2.jpg"
+                        ]
+                      }
+                    },
+                    {
+                      "id": 2,
+                      "name": "Formal Shirt",
+                      "price": 35,
+                      "sizes": ["M", "L", "XL"],
+                      "colors": ["Blue", "Gray"],
+                      "stock": {
+                        "Blue": { "M": 10, "L": 14, "XL": 6 },
+                        "Gray": { "M": 12, "L": 10, "XL": 8 }
+                      },
+                      "total_stock": 60,
+                      "total_sold": 40,
+                      "images": {
+                        "Blue": [
+                          "placeholder-blue1.jpg",
+                          "placeholder-blue2.jpg"
+                        ],
+                        "Gray": [
+                          "placeholder-gray1.jpg",
+                          "placeholder-gray2.jpg"
+                        ]
+                      }
+                    }
+                  ]
                 },
                 {
-                  "id": 2,
-                  "name": "Formal Shirt",
-                  "price": 35,
-                  "size": "L",
-                  "color": "Blue"
+                  "id": 1002,
+                  "name": "Winter Warmers",
+                  "products": [
+                    {
+                      "id": 3,
+                      "name": "Leather Jacket",
+                      "price": 120,
+                      "sizes": ["M", "L", "XL"],
+                      "colors": ["Black", "Brown"],
+                      "stock": {
+                        "Black": { "M": 5, "L": 8, "XL": 4 },
+                        "Brown": { "M": 3, "L": 6, "XL": 2 }
+                      },
+                      "total_stock": 28,
+                      "total_sold": 20,
+                      "images": {
+                        "Black": [
+                          "placeholder-black-leather1.jpg",
+                          "placeholder-black-leather2.jpg"
+                        ],
+                        "Brown": [
+                          "placeholder-brown-leather1.jpg",
+                          "placeholder-brown-leather2.jpg"
+                        ]
+                      }
+                    },
+                    {
+                      "id": 4,
+                      "name": "Wool Coat",
+                      "price": 150,
+                      "sizes": ["L", "XL"],
+                      "colors": ["Gray"],
+                      "stock": {
+                        "Gray": { "L": 4, "XL": 2 }
+                      },
+                      "total_stock": 6,
+                      "total_sold": 10,
+                      "images": {
+                        "Gray": [
+                          "placeholder-gray-coat1.jpg",
+                          "placeholder-gray-coat2.jpg"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": 1003,
+                  "name": "Outdoor Adventures",
+                  "products": [
+                    {
+                      "id": 5,
+                      "name": "Hiking Boots",
+                      "price": 85,
+                      "sizes": ["8", "9", "10", "11"],
+                      "colors": ["Brown", "Tan"],
+                      "stock": {
+                        "Brown": { "8": 10, "9": 12, "10": 15, "11": 8 },
+                        "Tan": { "8": 14, "9": 10, "10": 12, "11": 6 }
+                      },
+                      "total_stock": 87,
+                      "total_sold": 45,
+                      "images": {
+                        "Brown": [
+                          "placeholder-brown-boots1.jpg",
+                          "placeholder-brown-boots2.jpg"
+                        ],
+                        "Tan": [
+                          "placeholder-tan-boots1.jpg",
+                          "placeholder-tan-boots2.jpg"
+                        ]
+                      }
+                    },
+                    {
+                      "id": 6,
+                      "name": "Windbreaker Jacket",
+                      "price": 60,
+                      "sizes": ["S", "M", "L", "XL"],
+                      "colors": ["Navy", "Green"],
+                      "stock": {
+                        "Navy": { "S": 12, "M": 15, "L": 18, "XL": 8 },
+                        "Green": { "S": 10, "M": 14, "L": 12, "XL": 5 }
+                      },
+                      "total_stock": 94,
+                      "total_sold": 60,
+                      "images": {
+                        "Navy": [
+                          "placeholder-navy-windbreaker1.jpg",
+                          "placeholder-navy-windbreaker2.jpg"
+                        ],
+                        "Green": [
+                          "placeholder-green-windbreaker1.jpg",
+                          "placeholder-green-windbreaker2.jpg"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": 1004,
+                  "name": "Fitness and Activewear",
+                  "products": [
+                    {
+                      "id": 7,
+                      "name": "Running Shoes",
+                      "price": 75,
+                      "sizes": ["8", "9", "10", "11"],
+                      "colors": ["Gray", "Black"],
+                      "stock": {
+                        "Gray": { "8": 12, "9": 14, "10": 16, "11": 10 },
+                        "Black": { "8": 10, "9": 15, "10": 12, "11": 8 }
+                      },
+                      "total_stock": 97,
+                      "total_sold": 55,
+                      "images": {
+                        "Gray": [
+                          "placeholder-gray-shoes1.jpg",
+                          "placeholder-gray-shoes2.jpg"
+                        ],
+                        "Black": [
+                          "placeholder-black-shoes1.jpg",
+                          "placeholder-black-shoes2.jpg"
+                        ]
+                      }
+                    },
+                    {
+                      "id": 8,
+                      "name": "Gym Shorts",
+                      "price": 25,
+                      "sizes": ["S", "M", "L", "XL"],
+                      "colors": ["Black", "Blue"],
+                      "stock": {
+                        "Black": { "S": 15, "M": 20, "L": 25, "XL": 10 },
+                        "Blue": { "S": 12, "M": 18, "L": 22, "XL": 8 }
+                      },
+                      "total_stock": 130,
+                      "total_sold": 75,
+                      "images": {
+                        "Black": [
+                          "placeholder-black-shorts1.jpg",
+                          "placeholder-black-shorts2.jpg"
+                        ],
+                        "Blue": [
+                          "placeholder-blue-shorts1.jpg",
+                          "placeholder-blue-shorts2.jpg"
+                        ]
+                      }
+                    }
+                  ]
                 }
               ]
             }
