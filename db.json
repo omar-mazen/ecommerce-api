@@ -2,18 +2,30 @@
   "categories": [
     {
       "id": 1,
-      "name": "Electronics",
+      "name": "Men",
       "subcategories": [
         {
           "id": 101,
-          "name": "Phones",
+          "name": "Tops",
           "catalogs": [
             {
               "id": 1001,
-              "name": "Smartphones",
+              "name": "Summer Collection",
               "products": [
-                { "id": 1, "name": "iPhone 14", "price": 999 },
-                { "id": 2, "name": "Samsung Galaxy S23", "price": 899 }
+                {
+                  "id": 1,
+                  "name": "Cotton T-Shirt",
+                  "price": 20,
+                  "size": "M",
+                  "color": "White"
+                },
+                {
+                  "id": 2,
+                  "name": "Formal Shirt",
+                  "price": 35,
+                  "size": "L",
+                  "color": "Blue"
+                }
               ]
             }
           ]
@@ -22,18 +34,62 @@
     },
     {
       "id": 2,
-      "name": "Home Appliances",
+      "name": "Women",
       "subcategories": [
         {
           "id": 201,
-          "name": "Kitchen",
+          "name": "Bottoms",
           "catalogs": [
             {
               "id": 2001,
-              "name": "Microwaves",
+              "name": "Winter Collection",
               "products": [
-                { "id": 3, "name": "LG Microwave", "price": 120 },
-                { "id": 4, "name": "Samsung Microwave", "price": 150 }
+                {
+                  "id": 3,
+                  "name": "Wool Pants",
+                  "price": 40,
+                  "size": "S",
+                  "color": "Black"
+                },
+                {
+                  "id": 4,
+                  "name": "Denim Jeans",
+                  "price": 50,
+                  "size": "M",
+                  "color": "Blue"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Kids",
+      "subcategories": [
+        {
+          "id": 301,
+          "name": "Accessories",
+          "catalogs": [
+            {
+              "id": 3001,
+              "name": "Back-to-School",
+              "products": [
+                {
+                  "id": 5,
+                  "name": "Kids Cap",
+                  "price": 10,
+                  "size": "One Size",
+                  "color": "Red"
+                },
+                {
+                  "id": 6,
+                  "name": "Backpack",
+                  "price": 25,
+                  "size": "Medium",
+                  "color": "Green"
+                }
               ]
             }
           ]
