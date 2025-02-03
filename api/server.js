@@ -86,7 +86,13 @@ server.use((req, res, next) => {
 
 // Helper function to get group names based on ID
 function getGroupNameById(groupType, id) {
-  const collection = groupType.replace("_id", "s");
+  const collectionMap = {
+    catalog_id: "catalogs",
+    category_id: "categories",
+    subcategory_id: "subcategories",
+  };
+  const collection = collectionMap[groupType];
+  if (!collection) return null;
   const record = router.db.get(collection).find({ id }).value();
   return record ? record.name : `Unknown ${collection}`;
 }
