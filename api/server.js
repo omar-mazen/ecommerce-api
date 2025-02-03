@@ -74,8 +74,7 @@ server.use((req, res, next) => {
       acc[key].items.push(item);
       return acc;
     }, {});
-
-    return res.json(Object.values(groupedData));
+ return res.json(Object.values(groupedData));
   }
 
   next();
@@ -84,8 +83,8 @@ server.use((req, res, next) => {
 // Helper function to get group names based on ID
 function getGroupNameById(groupType, id) {
   const collection = groupType.replace("_id", "s");
-  const record = router.db.get(collection).find({ id: parseInt(id) }).value();
-  return record ? record.name : "Unknown";
+  const record = router.db.get(collection).find({ id }).value();
+  return record ? record.name : `Unknown ${collection}`;
 }
 
 // Route all API requests through /api
