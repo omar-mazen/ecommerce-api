@@ -26,7 +26,22 @@ server.use((req, res, next) => {
       }
     });
   }
-
+if (req.query.color) {
+    const colors = req.query.color.split(","); // Assuming colors are passed as a comma-separated string
+    router.db.get("products").forEach((product) => {
+      if (product.variants && product.variants.some((variant) => colors.includes(variant.color))) {
+        return product;
+      }
+    });
+  }
+if (req.query.size) {
+  const sizes = req.query.size.split(","); // Assuming sizes are passed as a comma-separated string
+  router.db.get("products").forEach((product) => {
+    if (product.variants && product.variants.some((variant) => sizes.includes(variant.size))) {
+      return product;
+    }
+  });
+}
   // Filter by catalog_id, category_id, subcategory_id
   if (req.query.catalog_id) {
     req.query.catalog_id = parseInt(req.query.catalog_id);
