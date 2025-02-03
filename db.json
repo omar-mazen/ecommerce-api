@@ -1,2591 +1,2730 @@
 {
-    "categories": [
+  "categories": [
+    {
+      "id": 1,
+      "name": "Men"
+    },
+    {
+      "id": 2,
+      "name": "Women"
+    },
+    {
+      "id": 3,
+      "name": "Kids"
+    }
+  ],
+  "subcategories": [
+    {
+      "id": 101,
+      "name": "Tops",
+      "category_id": 1
+    },
+    {
+      "id": 3001,
+      "name": "Elegant Evening Wear",
+      "category_id": 2
+    },
+    {
+      "id": 3002,
+      "name": "Casual Everyday Wear",
+      "category_id": 2
+    },
+    {
+      "id": 3003,
+      "name": "Athletic & Active Wear",
+      "category_id": 2
+    },
+    {
+      "id": 301,
+      "name": "Accessories",
+      "category_id": 3
+    },
+    {
+      "id": 3004,
+      "name": "Tops",
+      "category_id": 1
+    },
+    {
+      "id": 3005,
+      "name": "Bottoms",
+      "category_id": 1
+    },
+    {
+      "id": 3006,
+      "name": "Outerwear",
+      "category_id": 1
+    },
+    {
+      "id": 3007,
+      "name": "Activewear",
+      "category_id": 1
+    },
+    {
+      "id": 3008,
+      "name": "Formalwear",
+      "category_id": 1
+    },
+    {
+      "id": 3009,
+      "name": "Underwear",
+      "category_id": 1
+    },
+    {
+      "id": 3010,
+      "name": "Accessories",
+      "category_id": 1
+    },
+    {
+      "id": 3011,
+      "name": "Dresses",
+      "category_id": 2
+    },
+    {
+      "id": 3012,
+      "name": "Tops",
+      "category_id": 2
+    },
+    {
+      "id": 3013,
+      "name": "Bottoms",
+      "category_id": 2
+    },
+    {
+      "id": 3014,
+      "name": "Outerwear",
+      "category_id": 2
+    },
+    {
+      "id": 3015,
+      "name": "Activewear",
+      "category_id": 2
+    },
+    {
+      "id": 3016,
+      "name": "Formalwear",
+      "category_id": 2
+    },
+    {
+      "id": 3017,
+      "name": "Sleepwear",
+      "category_id": 2
+    },
+    {
+      "id": 3018,
+      "name": "Lingerie",
+      "category_id": 2
+    },
+    {
+      "id": 3019,
+      "name": "Accessories",
+      "category_id": 2
+    },
+    {
+      "id": 3020,
+      "name": "Tops",
+      "category_id": 3
+    },
+    {
+      "id": 3021,
+      "name": "Bottoms",
+      "category_id": 3
+    },
+    {
+      "id": 3022,
+      "name": "Outerwear",
+      "category_id": 3
+    },
+    {
+      "id": 3023,
+      "name": "Activewear",
+      "category_id": 3
+    },
+    {
+      "id": 3024,
+      "name": "Sleepwear",
+      "category_id": 3
+    },
+    {
+      "id": 3025,
+      "name": "Accessories",
+      "category_id": 3
+    }
+  ],
+  "catalogs": [
+    {
+      "id": 1001,
+      "name": "Summer Essentials",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 1002,
+      "name": "Winter Warmers",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 1003,
+      "name": "Outdoor Adventures",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 1004,
+      "name": "Fitness and Activewear",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 1006,
+      "name": "Outdoor Adventure Gear",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 1008,
+      "name": "Fitness Essentials",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 1009,
+      "name": "Luxury Accessories",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 1012,
+      "name": "Casual Wear",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 1013,
+      "name": "Formal Attire",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 1012,
+      "name": "Casual Wear",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 1013,
+      "name": "Formal Attire",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 1014,
+      "name": "T-Shirts",
+      "subcategory_id": 3004,
+      "category_id": 1
+    },
+    {
+      "id": 1015,
+      "name": "Polos",
+      "subcategory_id": 3004,
+      "category_id": 1
+    },
+    {
+      "id": 1016,
+      "name": "Casual Shirts",
+      "subcategory_id": 3004,
+      "category_id": 1
+    },
+    {
+      "id": 1017,
+      "name": "Formal Shirts",
+      "subcategory_id": 3004,
+      "category_id": 1
+    },
+    {
+      "id": 1018,
+      "name": "Jeans",
+      "subcategory_id": 3005,
+      "category_id": 1
+    },
+    {
+      "id": 1019,
+      "name": "Chinos",
+      "subcategory_id": 3005,
+      "category_id": 1
+    },
+    {
+      "id": 1020,
+      "name": "Trousers",
+      "subcategory_id": 3005,
+      "category_id": 1
+    },
+    {
+      "id": 1021,
+      "name": "Shorts",
+      "subcategory_id": 3005,
+      "category_id": 1
+    },
+    {
+      "id": 1022,
+      "name": "Jackets",
+      "subcategory_id": 3006,
+      "category_id": 1
+    },
+    {
+      "id": 1023,
+      "name": "Coats",
+      "subcategory_id": 3006,
+      "category_id": 1
+    },
+    {
+      "id": 1024,
+      "name": "Blazers",
+      "subcategory_id": 3006,
+      "category_id": 1
+    },
+    {
+      "id": 1025,
+      "name": "Joggers",
+      "subcategory_id": 3007,
+      "category_id": 1
+    },
+    {
+      "id": 1026,
+      "name": "Hoodies",
+      "subcategory_id": 3007,
+      "category_id": 1
+    },
+    {
+      "id": 1027,
+      "name": "Gym Shorts",
+      "subcategory_id": 3007,
+      "category_id": 1
+    },
+    {
+      "id": 1028,
+      "name": "Performance Tops",
+      "subcategory_id": 3007,
+      "category_id": 1
+    },
+    {
+      "id": 1029,
+      "name": "Suits",
+      "subcategory_id": 3008,
+      "category_id": 1
+    },
+    {
+      "id": 1030,
+      "name": "Waistcoats",
+      "subcategory_id": 3008,
+      "category_id": 1
+    },
+    {
+      "id": 1031,
+      "name": "Boxers",
+      "subcategory_id": 3009,
+      "category_id": 1
+    },
+    {
+      "id": 1032,
+      "name": "Briefs",
+      "subcategory_id": 3009,
+      "category_id": 1
+    },
+    {
+      "id": 1033,
+      "name": "Undershirts",
+      "subcategory_id": 3009,
+      "category_id": 1
+    },
+    {
+      "id": 1034,
+      "name": "Socks",
+      "subcategory_id": 3010,
+      "category_id": 1
+    },
+    {
+      "id": 1035,
+      "name": "Belts",
+      "subcategory_id": 3010,
+      "category_id": 1
+    },
+    {
+      "id": 1036,
+      "name": "Ties",
+      "subcategory_id": 3010,
+      "category_id": 1
+    },
+    {
+      "id": 1037,
+      "name": "Scarves",
+      "subcategory_id": 3010,
+      "category_id": 1
+    },
+    {
+      "id": 1038,
+      "name": "Evening Gowns",
+      "subcategory_id": 3011,
+      "category_id": 2
+    },
+    {
+      "id": 1039,
+      "name": "Maxi Dresses",
+      "subcategory_id": 3011,
+      "category_id": 2
+    },
+    {
+      "id": 1040,
+      "name": "Cocktail Dresses",
+      "subcategory_id": 3011,
+      "category_id": 2
+    },
+    {
+      "id": 1041,
+      "name": "Blouses",
+      "subcategory_id": 3012,
+      "category_id": 2
+    },
+    {
+      "id": 1042,
+      "name": "T-Shirts",
+      "subcategory_id": 3012,
+      "category_id": 2
+    },
+    {
+      "id": 1043,
+      "name": "Tank Tops",
+      "subcategory_id": 3012,
+      "category_id": 2
+    },
+    {
+      "id": 1044,
+      "name": "Jeans",
+      "subcategory_id": 3013,
+      "category_id": 2
+    },
+    {
+      "id": 1045,
+      "name": "Skirts",
+      "subcategory_id": 3013,
+      "category_id": 2
+    },
+    {
+      "id": 1046,
+      "name": "Trousers",
+      "subcategory_id": 3013,
+      "category_id": 2
+    },
+    {
+      "id": 1047,
+      "name": "Shorts",
+      "subcategory_id": 3013,
+      "category_id": 2
+    },
+    {
+      "id": 1048,
+      "name": "Leggings",
+      "subcategory_id": 3013,
+      "category_id": 2
+    },
+    {
+      "id": 1049,
+      "name": "Jackets",
+      "subcategory_id": 3014,
+      "category_id": 2
+    },
+    {
+      "id": 1050,
+      "name": "Coats",
+      "subcategory_id": 3014,
+      "category_id": 2
+    },
+    {
+      "id": 1051,
+      "name": "Blazers",
+      "subcategory_id": 3014,
+      "category_id": 2
+    },
+    {
+      "id": 1052,
+      "name": "Yoga Pants",
+      "subcategory_id": 3015,
+      "category_id": 2
+    },
+    {
+      "id": 1053,
+      "name": "Sports Bras",
+      "subcategory_id": 3015,
+      "category_id": 2
+    },
+    {
+      "id": 1054,
+      "name": "Hoodies",
+      "subcategory_id": 3015,
+      "category_id": 2
+    },
+    {
+      "id": 1055,
+      "name": "Performance Tops",
+      "subcategory_id": 3015,
+      "category_id": 2
+    },
+    {
+      "id": 1056,
+      "name": "Suits",
+      "subcategory_id": 3016,
+      "category_id": 2
+    },
+    {
+      "id": 1057,
+      "name": "Skirts",
+      "subcategory_id": 3016,
+      "category_id": 2
+    },
+    {
+      "id": 1058,
+      "name": "Silk Dresses",
+      "subcategory_id": 3016,
+      "category_id": 2
+    },
+    {
+      "id": 1059,
+      "name": "Nightgowns",
+      "subcategory_id": 3017,
+      "category_id": 2
+    },
+    {
+      "id": 1060,
+      "name": "Pajama Sets",
+      "subcategory_id": 3017,
+      "category_id": 2
+    },
+    {
+      "id": 1061,
+      "name": "Bras",
+      "subcategory_id": 3018,
+      "category_id": 2
+    },
+    {
+      "id": 1062,
+      "name": "Panties",
+      "subcategory_id": 3018,
+      "category_id": 2
+    },
+    {
+      "id": 1063,
+      "name": "Chemises",
+      "subcategory_id": 3018,
+      "category_id": 2
+    },
+    {
+      "id": 1064,
+      "name": "Scarves",
+      "subcategory_id": 3019,
+      "category_id": 2
+    },
+    {
+      "id": 1065,
+      "name": "Hats",
+      "subcategory_id": 3019,
+      "category_id": 2
+    },
+    {
+      "id": 1066,
+      "name": "Gloves",
+      "subcategory_id": 3019,
+      "category_id": 2
+    },
+    {
+      "id": 1067,
+      "name": "T-Shirts",
+      "subcategory_id": 3020,
+      "category_id": 3
+    },
+    {
+      "id": 1068,
+      "name": "Polo Shirts",
+      "subcategory_id": 3020,
+      "category_id": 3
+    },
+    {
+      "id": 1069,
+      "name": "Casual Shirts",
+      "subcategory_id": 3020,
+      "category_id": 3
+    },
+    {
+      "id": 1070,
+      "name": "Jeans",
+      "subcategory_id": 3021,
+      "category_id": 3
+    },
+    {
+      "id": 1071,
+      "name": "Shorts",
+      "subcategory_id": 3021,
+      "category_id": 3
+    },
+    {
+      "id": 1072,
+      "name": "Joggers",
+      "subcategory_id": 3021,
+      "category_id": 3
+    },
+    {
+      "id": 1073,
+      "name": "Skirts",
+      "subcategory_id": 3021,
+      "category_id": 3
+    },
+    {
+      "id": 1074,
+      "name": "Jackets",
+      "subcategory_id": 3022,
+      "category_id": 3
+    },
+    {
+      "id": 1075,
+      "name": "Coats",
+      "subcategory_id": 3022,
+      "category_id": 3
+    },
+    {
+      "id": 1076,
+      "name": "Hoodies",
+      "subcategory_id": 3022,
+      "category_id": 3
+    },
+    {
+      "id": 1077,
+      "name": "Tracksuits",
+      "subcategory_id": 3023,
+      "category_id": 3
+    },
+    {
+      "id": 1078,
+      "name": "Performance Tops",
+      "subcategory_id": 3023,
+      "category_id": 3
+    },
+    {
+      "id": 1079,
+      "name": "Pajamas",
+      "subcategory_id": 3024,
+      "category_id": 3
+    },
+    {
+      "id": 1080,
+      "name": "Nightgowns",
+      "subcategory_id": 3024,
+      "category_id": 3
+    },
+    {
+      "id": 1081,
+      "name": "Socks",
+      "subcategory_id": 3025,
+      "category_id": 3
+    },
+    {
+      "id": 1082,
+      "name": "Hats",
+      "subcategory_id": 3025,
+      "category_id": 3
+    },
+    {
+      "id": 1083,
+      "name": "Gloves",
+      "subcategory_id": 3025,
+      "category_id": 3
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Cotton T-Shirt",
+      "price": 20,
+      "catalog_id": 1001,
+      "total_stock": 86,
+      "total_sold": 50,
+      "variants": [
         {
-            "id": 1,
-            "name": "Men"
+          "color": "White",
+          "size": "S",
+          "stock": 10,
+          "images": [
+            "placeholder-white1.jpg",
+            "placeholder-white2.jpg"
+          ]
         },
         {
-            "id": 2,
-            "name": "Women"
+          "color": "White",
+          "size": "M",
+          "stock": 15,
+          "images": [
+            "placeholder-white1.jpg",
+            "placeholder-white2.jpg"
+          ]
         },
         {
-            "id": 3,
-            "name": "Kids"
+          "color": "White",
+          "size": "L",
+          "stock": 20,
+          "images": [
+            "placeholder-white1.jpg",
+            "placeholder-white2.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "size": "XL",
+          "stock": 5,
+          "images": [
+            "placeholder-white1.jpg",
+            "placeholder-white2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "S",
+          "stock": 8,
+          "images": [
+            "placeholder-black1.jpg",
+            "placeholder-black2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "M",
+          "stock": 12,
+          "images": [
+            "placeholder-black1.jpg",
+            "placeholder-black2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "L",
+          "stock": 18,
+          "images": [
+            "placeholder-black1.jpg",
+            "placeholder-black2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "XL",
+          "stock": 6,
+          "images": [
+            "placeholder-black1.jpg",
+            "placeholder-black2.jpg"
+          ]
         }
-    ],
-    "subcategories": [
+      ],
+      "description": "Experience unparalleled comfort and style with our premium Cotton T-Shirt. Crafted from the finest quality cotton, this t-shirt offers a soft and breathable fabric ideal for all-day wear. Its timeless design makes it a versatile wardrobe essential, perfect for layering or wearing on its own.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Formal Shirt",
+      "price": 35,
+      "catalog_id": 1001,
+      "total_stock": 60,
+      "total_sold": 40,
+      "variants": [
         {
-            "id": 101,
-            "name": "Tops",
-            "category_id": 1
+          "color": "Blue",
+          "size": "M",
+          "stock": 10,
+          "images": [
+            "placeholder-blue1.jpg",
+            "placeholder-blue2.jpg"
+          ]
         },
         {
-            "id": 3001,
-            "name": "Elegant Evening Wear",
-            "category_id": 2
+          "color": "Blue",
+          "size": "L",
+          "stock": 14,
+          "images": [
+            "placeholder-blue1.jpg",
+            "placeholder-blue2.jpg"
+          ]
         },
         {
-            "id": 3002,
-            "name": "Casual Everyday Wear",
-            "category_id": 2
+          "color": "Blue",
+          "size": "XL",
+          "stock": 6,
+          "images": [
+            "placeholder-blue1.jpg",
+            "placeholder-blue2.jpg"
+          ]
         },
         {
-            "id": 3003,
-            "name": "Athletic & Active Wear",
-            "category_id": 2
+          "color": "Gray",
+          "size": "M",
+          "stock": 12,
+          "images": [
+            "placeholder-gray1.jpg",
+            "placeholder-gray2.jpg"
+          ]
         },
         {
-            "id": 301,
-            "name": "Accessories",
-            "category_id": 3
+          "color": "Gray",
+          "size": "L",
+          "stock": 10,
+          "images": [
+            "placeholder-gray1.jpg",
+            "placeholder-gray2.jpg"
+          ]
         },
         {
-            "id": 3004,
-            "name": "Tops",
-            "category_id": 1
-        },
-        {
-            "id": 3005,
-            "name": "Bottoms",
-            "category_id": 1
-        },
-        {
-            "id": 3006,
-            "name": "Outerwear",
-            "category_id": 1
-        },
-        {
-            "id": 3007,
-            "name": "Activewear",
-            "category_id": 1
-        },
-        {
-            "id": 3008,
-            "name": "Formalwear",
-            "category_id": 1
-        },
-        {
-            "id": 3009,
-            "name": "Underwear",
-            "category_id": 1
-        },
-        {
-            "id": 3010,
-            "name": "Accessories",
-            "category_id": 1
-        },
-        {
-            "id": 3011,
-            "name": "Dresses",
-            "category_id": 2
-        },
-        {
-            "id": 3012,
-            "name": "Tops",
-            "category_id": 2
-        },
-        {
-            "id": 3013,
-            "name": "Bottoms",
-            "category_id": 2
-        },
-        {
-            "id": 3014,
-            "name": "Outerwear",
-            "category_id": 2
-        },
-        {
-            "id": 3015,
-            "name": "Activewear",
-            "category_id": 2
-        },
-        {
-            "id": 3016,
-            "name": "Formalwear",
-            "category_id": 2
-        },
-        {
-            "id": 3017,
-            "name": "Sleepwear",
-            "category_id": 2
-        },
-        {
-            "id": 3018,
-            "name": "Lingerie",
-            "category_id": 2
-        },
-        {
-            "id": 3019,
-            "name": "Accessories",
-            "category_id": 2
-        },
-        {
-            "id": 3020,
-            "name": "Tops",
-            "category_id": 3
-        },
-        {
-            "id": 3021,
-            "name": "Bottoms",
-            "category_id": 3
-        },
-        {
-            "id": 3022,
-            "name": "Outerwear",
-            "category_id": 3
-        },
-        {
-            "id": 3023,
-            "name": "Activewear",
-            "category_id": 3
-        },
-        {
-            "id": 3024,
-            "name": "Sleepwear",
-            "category_id": 3
-        },
-        {
-            "id": 3025,
-            "name": "Accessories",
-            "category_id": 3
+          "color": "Gray",
+          "size": "XL",
+          "stock": 8,
+          "images": [
+            "placeholder-gray1.jpg",
+            "placeholder-gray2.jpg"
+          ]
         }
-    ],
-    "catalogs": [
-        {
-            "id": 1001,
-            "name": "Summer Essentials",
-            "subcategory_id": 101
-        },
-        {
-            "id": 1002,
-            "name": "Winter Warmers",
-            "subcategory_id": 101
-        },
-        {
-            "id": 1003,
-            "name": "Outdoor Adventures",
-            "subcategory_id": 101
-        },
-        {
-            "id": 1004,
-            "name": "Fitness and Activewear",
-            "subcategory_id": 101
-        },
-        {
-            "id": 1006,
-            "name": "Outdoor Adventure Gear",
-            "subcategory_id": 101
-        },
-        {
-            "id": 1008,
-            "name": "Fitness Essentials",
-            "subcategory_id": 101
-        },
-        {
-            "id": 1009,
-            "name": "Luxury Accessories",
-            "subcategory_id": 101
-        },
-        {
-            "id": 1012,
-            "name": "Casual Wear",
-            "subcategory_id": 101
-        },
-        {
-            "id": 1013,
-            "name": "Formal Attire",
-            "subcategory_id": 101
-        },
-        {
-            "id": 1012,
-            "name": "Casual Wear",
-            "subcategory_id": 101
-        },
-        {
-            "id": 1013,
-            "name": "Formal Attire",
-            "subcategory_id": 101
-        },
-        {
-            "id": 1014,
-            "name": "T-Shirts",
-            "subcategory_id": 3004
-        },
-        {
-            "id": 1015,
-            "name": "Polos",
-            "subcategory_id": 3004
-        },
-        {
-            "id": 1016,
-            "name": "Casual Shirts",
-            "subcategory_id": 3004
-        },
-        {
-            "id": 1017,
-            "name": "Formal Shirts",
-            "subcategory_id": 3004
-        },
-        {
-            "id": 1018,
-            "name": "Jeans",
-            "subcategory_id": 3005
-        },
-        {
-            "id": 1019,
-            "name": "Chinos",
-            "subcategory_id": 3005
-        },
-        {
-            "id": 1020,
-            "name": "Trousers",
-            "subcategory_id": 3005
-        },
-        {
-            "id": 1021,
-            "name": "Shorts",
-            "subcategory_id": 3005
-        },
-        {
-            "id": 1022,
-            "name": "Jackets",
-            "subcategory_id": 3006
-        },
-        {
-            "id": 1023,
-            "name": "Coats",
-            "subcategory_id": 3006
-        },
-        {
-            "id": 1024,
-            "name": "Blazers",
-            "subcategory_id": 3006
-        },
-        {
-            "id": 1025,
-            "name": "Joggers",
-            "subcategory_id": 3007
-        },
-        {
-            "id": 1026,
-            "name": "Hoodies",
-            "subcategory_id": 3007
-        },
-        {
-            "id": 1027,
-            "name": "Gym Shorts",
-            "subcategory_id": 3007
-        },
-        {
-            "id": 1028,
-            "name": "Performance Tops",
-            "subcategory_id": 3007
-        },
-        {
-            "id": 1029,
-            "name": "Suits",
-            "subcategory_id": 3008
-        },
-        {
-            "id": 1030,
-            "name": "Waistcoats",
-            "subcategory_id": 3008
-        },
-        {
-            "id": 1031,
-            "name": "Boxers",
-            "subcategory_id": 3009
-        },
-        {
-            "id": 1032,
-            "name": "Briefs",
-            "subcategory_id": 3009
-        },
-        {
-            "id": 1033,
-            "name": "Undershirts",
-            "subcategory_id": 3009
-        },
-        {
-            "id": 1034,
-            "name": "Socks",
-            "subcategory_id": 3010
-        },
-        {
-            "id": 1035,
-            "name": "Belts",
-            "subcategory_id": 3010
-        },
-        {
-            "id": 1036,
-            "name": "Ties",
-            "subcategory_id": 3010
-        },
-        {
-            "id": 1037,
-            "name": "Scarves",
-            "subcategory_id": 3010
-        },
-        {
-            "id": 1038,
-            "name": "Evening Gowns",
-            "subcategory_id": 3011
-        },
-        {
-            "id": 1039,
-            "name": "Maxi Dresses",
-            "subcategory_id": 3011
-        },
-        {
-            "id": 1040,
-            "name": "Cocktail Dresses",
-            "subcategory_id": 3011
-        },
-        {
-            "id": 1041,
-            "name": "Blouses",
-            "subcategory_id": 3012
-        },
-        {
-            "id": 1042,
-            "name": "T-Shirts",
-            "subcategory_id": 3012
-        },
-        {
-            "id": 1043,
-            "name": "Tank Tops",
-            "subcategory_id": 3012
-        },
-        {
-            "id": 1044,
-            "name": "Jeans",
-            "subcategory_id": 3013
-        },
-        {
-            "id": 1045,
-            "name": "Skirts",
-            "subcategory_id": 3013
-        },
-        {
-            "id": 1046,
-            "name": "Trousers",
-            "subcategory_id": 3013
-        },
-        {
-            "id": 1047,
-            "name": "Shorts",
-            "subcategory_id": 3013
-        },
-        {
-            "id": 1048,
-            "name": "Leggings",
-            "subcategory_id": 3013
-        },
-        {
-            "id": 1049,
-            "name": "Jackets",
-            "subcategory_id": 3014
-        },
-        {
-            "id": 1050,
-            "name": "Coats",
-            "subcategory_id": 3014
-        },
-        {
-            "id": 1051,
-            "name": "Blazers",
-            "subcategory_id": 3014
-        },
-        {
-            "id": 1052,
-            "name": "Yoga Pants",
-            "subcategory_id": 3015
-        },
-        {
-            "id": 1053,
-            "name": "Sports Bras",
-            "subcategory_id": 3015
-        },
-        {
-            "id": 1054,
-            "name": "Hoodies",
-            "subcategory_id": 3015
-        },
-        {
-            "id": 1055,
-            "name": "Performance Tops",
-            "subcategory_id": 3015
-        },
-        {
-            "id": 1056,
-            "name": "Suits",
-            "subcategory_id": 3016
-        },
-        {
-            "id": 1057,
-            "name": "Skirts",
-            "subcategory_id": 3016
-        },
-        {
-            "id": 1058,
-            "name": "Silk Dresses",
-            "subcategory_id": 3016
-        },
-        {
-            "id": 1059,
-            "name": "Nightgowns",
-            "subcategory_id": 3017
-        },
-        {
-            "id": 1060,
-            "name": "Pajama Sets",
-            "subcategory_id": 3017
-        },
-        {
-            "id": 1061,
-            "name": "Bras",
-            "subcategory_id": 3018
-        },
-        {
-            "id": 1062,
-            "name": "Panties",
-            "subcategory_id": 3018
-        },
-        {
-            "id": 1063,
-            "name": "Chemises",
-            "subcategory_id": 3018
-        },
-        {
-            "id": 1064,
-            "name": "Scarves",
-            "subcategory_id": 3019
-        },
-        {
-            "id": 1065,
-            "name": "Hats",
-            "subcategory_id": 3019
-        },
-        {
-            "id": 1066,
-            "name": "Gloves",
-            "subcategory_id": 3019
-        },
-        {
-            "id": 1067,
-            "name": "T-Shirts",
-            "subcategory_id": 3020
-        },
-        {
-            "id": 1068,
-            "name": "Polo Shirts",
-            "subcategory_id": 3020
-        },
-        {
-            "id": 1069,
-            "name": "Casual Shirts",
-            "subcategory_id": 3020
-        },
-        {
-            "id": 1070,
-            "name": "Jeans",
-            "subcategory_id": 3021
-        },
-        {
-            "id": 1071,
-            "name": "Shorts",
-            "subcategory_id": 3021
-        },
-        {
-            "id": 1072,
-            "name": "Joggers",
-            "subcategory_id": 3021
-        },
-        {
-            "id": 1073,
-            "name": "Skirts",
-            "subcategory_id": 3021
-        },
-        {
-            "id": 1074,
-            "name": "Jackets",
-            "subcategory_id": 3022
-        },
-        {
-            "id": 1075,
-            "name": "Coats",
-            "subcategory_id": 3022
-        },
-        {
-            "id": 1076,
-            "name": "Hoodies",
-            "subcategory_id": 3022
-        },
-        {
-            "id": 1077,
-            "name": "Tracksuits",
-            "subcategory_id": 3023
-        },
-        {
-            "id": 1078,
-            "name": "Performance Tops",
-            "subcategory_id": 3023
-        },
-        {
-            "id": 1079,
-            "name": "Pajamas",
-            "subcategory_id": 3024
-        },
-        {
-            "id": 1080,
-            "name": "Nightgowns",
-            "subcategory_id": 3024
-        },
-        {
-            "id": 1081,
-            "name": "Socks",
-            "subcategory_id": 3025
-        },
-        {
-            "id": 1082,
-            "name": "Hats",
-            "subcategory_id": 3025
-        },
-        {
-            "id": 1083,
-            "name": "Gloves",
-            "subcategory_id": 3025
+      ],
+      "description": "Step up your formal wear game with our impeccably tailored Formal Shirt. Made from high-quality fabric, it provides a crisp and polished appearance that lasts throughout the day. Ideal for business meetings or special occasions, this shirt ensures you look your best wherever you go.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 3,
+      "name": "Leather Jacket",
+      "price": 120,
+      "catalog_id": 1002,
+      "total_stock": 28,
+      "total_sold": 20,
+      "variants": [
+        {
+          "color": "Black",
+          "size": "M",
+          "stock": 5,
+          "images": [
+            "placeholder-black-leather1.jpg",
+            "placeholder-black-leather2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "L",
+          "stock": 8,
+          "images": [
+            "placeholder-black-leather1.jpg",
+            "placeholder-black-leather2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "XL",
+          "stock": 4,
+          "images": [
+            "placeholder-black-leather1.jpg",
+            "placeholder-black-leather2.jpg"
+          ]
+        },
+        {
+          "color": "Brown",
+          "size": "M",
+          "stock": 3,
+          "images": [
+            "placeholder-brown-leather1.jpg",
+            "placeholder-brown-leather2.jpg"
+          ]
+        },
+        {
+          "color": "Brown",
+          "size": "L",
+          "stock": 6,
+          "images": [
+            "placeholder-brown-leather1.jpg",
+            "placeholder-brown-leather2.jpg"
+          ]
+        },
+        {
+          "color": "Brown",
+          "size": "XL",
+          "stock": 2,
+          "images": [
+            "placeholder-brown-leather1.jpg",
+            "placeholder-brown-leather2.jpg"
+          ]
         }
-    ],
-    "products": [
+      ],
+      "description": "Turn heads with our stylish and rugged Leather Jacket. Expertly crafted from genuine leather, this jacket combines warmth, durability, and a sophisticated edge. It's perfect for both casual outings and evening events, adding an instant boost to your fashion quotient.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 4,
+      "name": "Wool Coat",
+      "price": 150,
+      "catalog_id": 1002,
+      "total_stock": 6,
+      "total_sold": 10,
+      "variants": [
         {
-            "id": 1,
-            "name": "Cotton T-Shirt",
-            "price": 20,
-            "catalog_id": 1001,
-            "total_stock": 86,
-            "total_sold": 50,
-            "variants": [
-                {
-                    "color": "White",
-                    "size": "S",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-white1.jpg",
-                        "placeholder-white2.jpg"
-                    ]
-                },
-                {
-                    "color": "White",
-                    "size": "M",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-white1.jpg",
-                        "placeholder-white2.jpg"
-                    ]
-                },
-                {
-                    "color": "White",
-                    "size": "L",
-                    "stock": 20,
-                    "images": [
-                        "placeholder-white1.jpg",
-                        "placeholder-white2.jpg"
-                    ]
-                },
-                {
-                    "color": "White",
-                    "size": "XL",
-                    "stock": 5,
-                    "images": [
-                        "placeholder-white1.jpg",
-                        "placeholder-white2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "S",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-black1.jpg",
-                        "placeholder-black2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "M",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-black1.jpg",
-                        "placeholder-black2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "L",
-                    "stock": 18,
-                    "images": [
-                        "placeholder-black1.jpg",
-                        "placeholder-black2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "XL",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-black1.jpg",
-                        "placeholder-black2.jpg"
-                    ]
-                }
-            ],
-            "description": "The Cotton T-Shirt is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
+          "color": "Gray",
+          "size": "L",
+          "stock": 4,
+          "images": [
+            "placeholder-gray-coat1.jpg",
+            "placeholder-gray-coat2.jpg"
+          ]
         },
         {
-            "id": 2,
-            "name": "Formal Shirt",
-            "price": 35,
-            "catalog_id": 1001,
-            "total_stock": 60,
-            "total_sold": 40,
-            "variants": [
-                {
-                    "color": "Blue",
-                    "size": "M",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-blue1.jpg",
-                        "placeholder-blue2.jpg"
-                    ]
-                },
-                {
-                    "color": "Blue",
-                    "size": "L",
-                    "stock": 14,
-                    "images": [
-                        "placeholder-blue1.jpg",
-                        "placeholder-blue2.jpg"
-                    ]
-                },
-                {
-                    "color": "Blue",
-                    "size": "XL",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-blue1.jpg",
-                        "placeholder-blue2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "M",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-gray1.jpg",
-                        "placeholder-gray2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "L",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-gray1.jpg",
-                        "placeholder-gray2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "XL",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-gray1.jpg",
-                        "placeholder-gray2.jpg"
-                    ]
-                }
-            ],
-            "description": "The Formal Shirt is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
-        },
-        {
-            "id": 3,
-            "name": "Leather Jacket",
-            "price": 120,
-            "catalog_id": 1002,
-            "total_stock": 28,
-            "total_sold": 20,
-            "variants": [
-                {
-                    "color": "Black",
-                    "size": "M",
-                    "stock": 5,
-                    "images": [
-                        "placeholder-black-leather1.jpg",
-                        "placeholder-black-leather2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "L",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-black-leather1.jpg",
-                        "placeholder-black-leather2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "XL",
-                    "stock": 4,
-                    "images": [
-                        "placeholder-black-leather1.jpg",
-                        "placeholder-black-leather2.jpg"
-                    ]
-                },
-                {
-                    "color": "Brown",
-                    "size": "M",
-                    "stock": 3,
-                    "images": [
-                        "placeholder-brown-leather1.jpg",
-                        "placeholder-brown-leather2.jpg"
-                    ]
-                },
-                {
-                    "color": "Brown",
-                    "size": "L",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-brown-leather1.jpg",
-                        "placeholder-brown-leather2.jpg"
-                    ]
-                },
-                {
-                    "color": "Brown",
-                    "size": "XL",
-                    "stock": 2,
-                    "images": [
-                        "placeholder-brown-leather1.jpg",
-                        "placeholder-brown-leather2.jpg"
-                    ]
-                }
-            ],
-            "description": "Stay warm and stylish with the Leather Jacket. Designed to protect you from the cold while looking your best."
-        },
-        {
-            "id": 4,
-            "name": "Wool Coat",
-            "price": 150,
-            "catalog_id": 1002,
-            "total_stock": 6,
-            "total_sold": 10,
-            "variants": [
-                {
-                    "color": "Gray",
-                    "size": "L",
-                    "stock": 4,
-                    "images": [
-                        "placeholder-gray-coat1.jpg",
-                        "placeholder-gray-coat2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "XL",
-                    "stock": 2,
-                    "images": [
-                        "placeholder-gray-coat1.jpg",
-                        "placeholder-gray-coat2.jpg"
-                    ]
-                }
-            ],
-            "description": "Stay warm and stylish with the Wool Coat. Designed to protect you from the cold while looking your best."
-        },
-        {
-            "id": 5,
-            "name": "Hiking Boots",
-            "price": 85,
-            "catalog_id": 1003,
-            "total_stock": 87,
-            "total_sold": 45,
-            "variants": [
-                {
-                    "color": "Brown",
-                    "size": "8",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-brown-boots1.jpg",
-                        "placeholder-brown-boots2.jpg"
-                    ]
-                },
-                {
-                    "color": "Brown",
-                    "size": "9",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-brown-boots1.jpg",
-                        "placeholder-brown-boots2.jpg"
-                    ]
-                },
-                {
-                    "color": "Brown",
-                    "size": "10",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-brown-boots1.jpg",
-                        "placeholder-brown-boots2.jpg"
-                    ]
-                },
-                {
-                    "color": "Brown",
-                    "size": "11",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-brown-boots1.jpg",
-                        "placeholder-brown-boots2.jpg"
-                    ]
-                },
-                {
-                    "color": "Tan",
-                    "size": "8",
-                    "stock": 14,
-                    "images": [
-                        "placeholder-tan-boots1.jpg",
-                        "placeholder-tan-boots2.jpg"
-                    ]
-                },
-                {
-                    "color": "Tan",
-                    "size": "9",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-tan-boots1.jpg",
-                        "placeholder-tan-boots2.jpg"
-                    ]
-                },
-                {
-                    "color": "Tan",
-                    "size": "10",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-tan-boots1.jpg",
-                        "placeholder-tan-boots2.jpg"
-                    ]
-                },
-                {
-                    "color": "Tan",
-                    "size": "11",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-tan-boots1.jpg",
-                        "placeholder-tan-boots2.jpg"
-                    ]
-                }
-            ],
-            "description": "The Hiking Boots is ideal for outdoor adventures, combining durability with functional design to keep you prepared for any activity."
-        },
-        {
-            "id": 6,
-            "name": "Windbreaker Jacket",
-            "price": 60,
-            "catalog_id": 1003,
-            "total_stock": 94,
-            "total_sold": 60,
-            "variants": [
-                {
-                    "color": "Navy",
-                    "size": "S",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-navy-windbreaker1.jpg",
-                        "placeholder-navy-windbreaker2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "M",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-navy-windbreaker1.jpg",
-                        "placeholder-navy-windbreaker2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "L",
-                    "stock": 18,
-                    "images": [
-                        "placeholder-navy-windbreaker1.jpg",
-                        "placeholder-navy-windbreaker2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "XL",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-navy-windbreaker1.jpg",
-                        "placeholder-navy-windbreaker2.jpg"
-                    ]
-                },
-                {
-                    "color": "Green",
-                    "size": "S",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-green-windbreaker1.jpg",
-                        "placeholder-green-windbreaker2.jpg"
-                    ]
-                },
-                {
-                    "color": "Green",
-                    "size": "M",
-                    "stock": 14,
-                    "images": [
-                        "placeholder-green-windbreaker1.jpg",
-                        "placeholder-green-windbreaker2.jpg"
-                    ]
-                },
-                {
-                    "color": "Green",
-                    "size": "L",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-green-windbreaker1.jpg",
-                        "placeholder-green-windbreaker2.jpg"
-                    ]
-                },
-                {
-                    "color": "Green",
-                    "size": "XL",
-                    "stock": 5,
-                    "images": [
-                        "placeholder-green-windbreaker1.jpg",
-                        "placeholder-green-windbreaker2.jpg"
-                    ]
-                }
-            ],
-            "description": "The Windbreaker Jacket is ideal for outdoor adventures, combining durability with functional design to keep you prepared for any activity."
-        },
-        {
-            "id": 7,
-            "name": "Running Shoes",
-            "price": 75,
-            "catalog_id": 1004,
-            "total_stock": 97,
-            "total_sold": 55,
-            "variants": [
-                {
-                    "color": "Gray",
-                    "size": "8",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-gray-shoes1.jpg",
-                        "placeholder-gray-shoes2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "9",
-                    "stock": 14,
-                    "images": [
-                        "placeholder-gray-shoes1.jpg",
-                        "placeholder-gray-shoes2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "10",
-                    "stock": 16,
-                    "images": [
-                        "placeholder-gray-shoes1.jpg",
-                        "placeholder-gray-shoes2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "11",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-gray-shoes1.jpg",
-                        "placeholder-gray-shoes2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "8",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-black-shoes1.jpg",
-                        "placeholder-black-shoes2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "9",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-black-shoes1.jpg",
-                        "placeholder-black-shoes2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "10",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-black-shoes1.jpg",
-                        "placeholder-black-shoes2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "11",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-black-shoes1.jpg",
-                        "placeholder-black-shoes2.jpg"
-                    ]
-                }
-            ],
-            "description": "Enhance your performance with the Running Shoes, designed for active lifestyles and built to support your fitness goals."
-        },
-        {
-            "id": 8,
-            "name": "Gym Shorts",
-            "price": 25,
-            "catalog_id": 1004,
-            "total_stock": 130,
-            "total_sold": 75,
-            "variants": [
-                {
-                    "color": "Black",
-                    "size": "S",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-black-shorts1.jpg",
-                        "placeholder-black-shorts2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "M",
-                    "stock": 20,
-                    "images": [
-                        "placeholder-black-shorts1.jpg",
-                        "placeholder-black-shorts2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "L",
-                    "stock": 25,
-                    "images": [
-                        "placeholder-black-shorts1.jpg",
-                        "placeholder-black-shorts2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "XL",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-black-shorts1.jpg",
-                        "placeholder-black-shorts2.jpg"
-                    ]
-                },
-                {
-                    "color": "Blue",
-                    "size": "S",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-blue-shorts1.jpg",
-                        "placeholder-blue-shorts2.jpg"
-                    ]
-                },
-                {
-                    "color": "Blue",
-                    "size": "M",
-                    "stock": 18,
-                    "images": [
-                        "placeholder-blue-shorts1.jpg",
-                        "placeholder-blue-shorts2.jpg"
-                    ]
-                },
-                {
-                    "color": "Blue",
-                    "size": "L",
-                    "stock": 22,
-                    "images": [
-                        "placeholder-blue-shorts1.jpg",
-                        "placeholder-blue-shorts2.jpg"
-                    ]
-                },
-                {
-                    "color": "Blue",
-                    "size": "XL",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-blue-shorts1.jpg",
-                        "placeholder-blue-shorts2.jpg"
-                    ]
-                }
-            ],
-            "description": "Enhance your performance with the Gym Shorts, designed for active lifestyles and built to support your fitness goals."
-        },
-        {
-            "id": 31,
-            "name": "Hiking Backpack",
-            "price": 60,
-            "catalog_id": 1006,
-            "total_stock": 77,
-            "total_sold": 30,
-            "variants": [
-                {
-                    "color": "Green",
-                    "size": "25L",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-green-backpack1.jpg",
-                        "placeholder-green-backpack2.jpg"
-                    ]
-                },
-                {
-                    "color": "Green",
-                    "size": "35L",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-green-backpack1.jpg",
-                        "placeholder-green-backpack2.jpg"
-                    ]
-                },
-                {
-                    "color": "Green",
-                    "size": "50L",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-green-backpack1.jpg",
-                        "placeholder-green-backpack2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "25L",
-                    "stock": 20,
-                    "images": [
-                        "placeholder-black-backpack1.jpg",
-                        "placeholder-black-backpack2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "35L",
-                    "stock": 14,
-                    "images": [
-                        "placeholder-black-backpack1.jpg",
-                        "placeholder-black-backpack2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "50L",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-black-backpack1.jpg",
-                        "placeholder-black-backpack2.jpg"
-                    ]
-                }
-            ],
-            "description": "The Hiking Backpack is ideal for outdoor adventures, combining durability with functional design to keep you prepared for any activity."
-        },
-        {
-            "id": 32,
-            "name": "Waterproof Hiking Boots",
-            "price": 85,
-            "catalog_id": 1006,
-            "total_stock": 78,
-            "total_sold": 40,
-            "variants": [
-                {
-                    "color": "Brown",
-                    "size": "8",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-brown-boots1.jpg",
-                        "placeholder-brown-boots2.jpg"
-                    ]
-                },
-                {
-                    "color": "Brown",
-                    "size": "9",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-brown-boots1.jpg",
-                        "placeholder-brown-boots2.jpg"
-                    ]
-                },
-                {
-                    "color": "Brown",
-                    "size": "10",
-                    "stock": 14,
-                    "images": [
-                        "placeholder-brown-boots1.jpg",
-                        "placeholder-brown-boots2.jpg"
-                    ]
-                },
-                {
-                    "color": "Brown",
-                    "size": "11",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-brown-boots1.jpg",
-                        "placeholder-brown-boots2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "8",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-gray-boots1.jpg",
-                        "placeholder-gray-boots2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "9",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-gray-boots1.jpg",
-                        "placeholder-gray-boots2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "10",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-gray-boots1.jpg",
-                        "placeholder-gray-boots2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "11",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-gray-boots1.jpg",
-                        "placeholder-gray-boots2.jpg"
-                    ]
-                }
-            ],
-            "description": "The Waterproof Hiking Boots is ideal for outdoor adventures, combining durability with functional design to keep you prepared for any activity."
-        },
-        {
-            "id": 33,
-            "name": "All-Weather Jacket",
-            "price": 120,
-            "catalog_id": 1006,
-            "total_stock": 72,
-            "total_sold": 35,
-            "variants": [
-                {
-                    "color": "Navy",
-                    "size": "M",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-navy-jacket1.jpg",
-                        "placeholder-navy-jacket2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "L",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-navy-jacket1.jpg",
-                        "placeholder-navy-jacket2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "XL",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-navy-jacket1.jpg",
-                        "placeholder-navy-jacket2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "M",
-                    "stock": 14,
-                    "images": [
-                        "placeholder-black-jacket1.jpg",
-                        "placeholder-black-jacket2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "L",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-black-jacket1.jpg",
-                        "placeholder-black-jacket2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "XL",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-black-jacket1.jpg",
-                        "placeholder-black-jacket2.jpg"
-                    ]
-                }
-            ],
-            "description": "The All-Weather Jacket is ideal for outdoor adventures, combining durability with functional design to keep you prepared for any activity."
-        },
-        {
-            "id": 37,
-            "name": "Yoga Mat",
-            "price": 25,
-            "catalog_id": 1008,
-            "total_stock": 83,
-            "total_sold": 40,
-            "variants": [
-                {
-                    "color": "Purple",
-                    "size": "Standard",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-purple-yogamat1.jpg",
-                        "placeholder-purple-yogamat2.jpg"
-                    ]
-                },
-                {
-                    "color": "Purple",
-                    "size": "Extra Thick",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-purple-yogamat1.jpg",
-                        "placeholder-purple-yogamat2.jpg"
-                    ]
-                },
-                {
-                    "color": "Blue",
-                    "size": "Standard",
-                    "stock": 20,
-                    "images": [
-                        "placeholder-blue-yogamat1.jpg",
-                        "placeholder-blue-yogamat2.jpg"
-                    ]
-                },
-                {
-                    "color": "Blue",
-                    "size": "Extra Thick",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-blue-yogamat1.jpg",
-                        "placeholder-blue-yogamat2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "Standard",
-                    "stock": 18,
-                    "images": [
-                        "placeholder-gray-yogamat1.jpg",
-                        "placeholder-gray-yogamat2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "Extra Thick",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-gray-yogamat1.jpg",
-                        "placeholder-gray-yogamat2.jpg"
-                    ]
-                }
-            ],
-            "description": "Enhance your performance with the Yoga Mat, designed for active lifestyles and built to support your fitness goals."
-        },
-        {
-            "id": 38,
-            "name": "Dumbbell Set",
-            "price": 50,
-            "catalog_id": 1008,
-            "total_stock": 50,
-            "total_sold": 30,
-            "variants": [
-                {
-                    "color": "Black",
-                    "size": "5kg",
-                    "stock": 25,
-                    "images": [
-                        "placeholder-black-dumbbell1.jpg",
-                        "placeholder-black-dumbbell2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "10kg",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-black-dumbbell1.jpg",
-                        "placeholder-black-dumbbell2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "15kg",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-black-dumbbell1.jpg",
-                        "placeholder-black-dumbbell2.jpg"
-                    ]
-                }
-            ],
-            "description": "Enhance your performance with the Dumbbell Set, designed for active lifestyles and built to support your fitness goals."
-        },
-        {
-            "id": 39,
-            "name": "Resistance Bands",
-            "price": 20,
-            "catalog_id": 1008,
-            "total_stock": 143,
-            "total_sold": 60,
-            "variants": [
-                {
-                    "color": "Red",
-                    "size": "Light",
-                    "stock": 20,
-                    "images": [
-                        "placeholder-red-band1.jpg",
-                        "placeholder-red-band2.jpg"
-                    ]
-                },
-                {
-                    "color": "Red",
-                    "size": "Medium",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-red-band1.jpg",
-                        "placeholder-red-band2.jpg"
-                    ]
-                },
-                {
-                    "color": "Red",
-                    "size": "Heavy",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-red-band1.jpg",
-                        "placeholder-red-band2.jpg"
-                    ]
-                },
-                {
-                    "color": "Yellow",
-                    "size": "Light",
-                    "stock": 18,
-                    "images": [
-                        "placeholder-yellow-band1.jpg",
-                        "placeholder-yellow-band2.jpg"
-                    ]
-                },
-                {
-                    "color": "Yellow",
-                    "size": "Medium",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-yellow-band1.jpg",
-                        "placeholder-yellow-band2.jpg"
-                    ]
-                },
-                {
-                    "color": "Yellow",
-                    "size": "Heavy",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-yellow-band1.jpg",
-                        "placeholder-yellow-band2.jpg"
-                    ]
-                },
-                {
-                    "color": "Green",
-                    "size": "Light",
-                    "stock": 22,
-                    "images": [
-                        "placeholder-green-band1.jpg",
-                        "placeholder-green-band2.jpg"
-                    ]
-                },
-                {
-                    "color": "Green",
-                    "size": "Medium",
-                    "stock": 14,
-                    "images": [
-                        "placeholder-green-band1.jpg",
-                        "placeholder-green-band2.jpg"
-                    ]
-                },
-                {
-                    "color": "Green",
-                    "size": "Heavy",
-                    "stock": 9,
-                    "images": [
-                        "placeholder-green-band1.jpg",
-                        "placeholder-green-band2.jpg"
-                    ]
-                }
-            ],
-            "description": "Enhance your performance with the Resistance Bands, designed for active lifestyles and built to support your fitness goals."
-        },
-        {
-            "id": 40,
-            "name": "Leather Wallet",
-            "price": 45,
-            "catalog_id": 1009,
-            "total_stock": 70,
-            "total_sold": 50,
-            "variants": [
-                {
-                    "color": "Brown",
-                    "size": "One Size",
-                    "stock": 30,
-                    "images": [
-                        "placeholder-brown-wallet1.jpg",
-                        "placeholder-brown-wallet2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "One Size",
-                    "stock": 40,
-                    "images": [
-                        "placeholder-black-wallet1.jpg",
-                        "placeholder-black-wallet2.jpg"
-                    ]
-                }
-            ],
-            "description": "Elevate your outfit with the Leather Wallet. This accessory combines practicality with timeless elegance."
-        },
-        {
-            "id": 41,
-            "name": "Gold-Plated Watch",
-            "price": 300,
-            "catalog_id": 1009,
-            "total_stock": 32,
-            "total_sold": 20,
-            "variants": [
-                {
-                    "color": "Gold",
-                    "size": "Medium",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-gold-watch1.jpg",
-                        "placeholder-gold-watch2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gold",
-                    "size": "Large",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-gold-watch1.jpg",
-                        "placeholder-gold-watch2.jpg"
-                    ]
-                },
-                {
-                    "color": "Silver",
-                    "size": "Medium",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-silver-watch1.jpg",
-                        "placeholder-silver-watch2.jpg"
-                    ]
-                },
-                {
-                    "color": "Silver",
-                    "size": "Large",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-silver-watch1.jpg",
-                        "placeholder-silver-watch2.jpg"
-                    ]
-                }
-            ],
-            "description": "Elevate your outfit with the Gold-Plated Watch. This accessory combines practicality with timeless elegance."
-        },
-        {
-            "id": 42,
-            "name": "Designer Sunglasses",
-            "price": 150,
-            "catalog_id": 1009,
-            "total_stock": 45,
-            "total_sold": 30,
-            "variants": [
-                {
-                    "color": "Black",
-                    "size": "One Size",
-                    "stock": 25,
-                    "images": [
-                        "placeholder-black-sunglasses1.jpg",
-                        "placeholder-black-sunglasses2.jpg"
-                    ]
-                },
-                {
-                    "color": "Tortoise Shell",
-                    "size": "One Size",
-                    "stock": 20,
-                    "images": [
-                        "placeholder-tortoise-sunglasses1.jpg",
-                        "placeholder-tortoise-sunglasses2.jpg"
-                    ]
-                }
-            ],
-            "description": "Elevate your outfit with the Designer Sunglasses. This accessory combines practicality with timeless elegance."
-        },
-        {
-            "id": 49,
-            "name": "Graphic Tee",
-            "price": 25,
-            "catalog_id": 1012,
-            "total_stock": 165,
-            "total_sold": 80,
-            "variants": [
-                {
-                    "color": "White",
-                    "size": "S",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-white-graphictee1.jpg",
-                        "placeholder-white-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "White",
-                    "size": "M",
-                    "stock": 20,
-                    "images": [
-                        "placeholder-white-graphictee1.jpg",
-                        "placeholder-white-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "White",
-                    "size": "L",
-                    "stock": 25,
-                    "images": [
-                        "placeholder-white-graphictee1.jpg",
-                        "placeholder-white-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "White",
-                    "size": "XL",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-white-graphictee1.jpg",
-                        "placeholder-white-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "S",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-black-graphictee1.jpg",
-                        "placeholder-black-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "M",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-black-graphictee1.jpg",
-                        "placeholder-black-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "L",
-                    "stock": 20,
-                    "images": [
-                        "placeholder-black-graphictee1.jpg",
-                        "placeholder-black-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "XL",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-black-graphictee1.jpg",
-                        "placeholder-black-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Red",
-                    "size": "S",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-red-graphictee1.jpg",
-                        "placeholder-red-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Red",
-                    "size": "M",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-red-graphictee1.jpg",
-                        "placeholder-red-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Red",
-                    "size": "L",
-                    "stock": 16,
-                    "images": [
-                        "placeholder-red-graphictee1.jpg",
-                        "placeholder-red-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Red",
-                    "size": "XL",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-red-graphictee1.jpg",
-                        "placeholder-red-graphictee2.jpg"
-                    ]
-                }
-            ],
-            "description": "The Graphic Tee is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
-        },
-        {
-            "id": 50,
-            "name": "Denim Jacket",
-            "price": 60,
-            "catalog_id": 1012,
-            "total_stock": 61,
-            "total_sold": 40,
-            "variants": [
-                {
-                    "color": "Blue",
-                    "size": "M",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-blue-denimjacket1.jpg",
-                        "placeholder-blue-denimjacket2.jpg"
-                    ]
-                },
-                {
-                    "color": "Blue",
-                    "size": "L",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-blue-denimjacket1.jpg",
-                        "placeholder-blue-denimjacket2.jpg"
-                    ]
-                },
-                {
-                    "color": "Blue",
-                    "size": "XL",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-blue-denimjacket1.jpg",
-                        "placeholder-blue-denimjacket2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "M",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-black-denimjacket1.jpg",
-                        "placeholder-black-denimjacket2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "L",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-black-denimjacket1.jpg",
-                        "placeholder-black-denimjacket2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "XL",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-black-denimjacket1.jpg",
-                        "placeholder-black-denimjacket2.jpg"
-                    ]
-                }
-            ],
-            "description": "The Denim Jacket is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
-        },
-        {
-            "id": 51,
-            "name": "Chino Pants",
-            "price": 35,
-            "catalog_id": 1012,
-            "total_stock": 92,
-            "total_sold": 50,
-            "variants": [
-                {
-                    "color": "Khaki",
-                    "size": "30",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-khaki-chinopants1.jpg",
-                        "placeholder-khaki-chinopants2.jpg"
-                    ]
-                },
-                {
-                    "color": "Khaki",
-                    "size": "32",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-khaki-chinopants1.jpg",
-                        "placeholder-khaki-chinopants2.jpg"
-                    ]
-                },
-                {
-                    "color": "Khaki",
-                    "size": "34",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-khaki-chinopants1.jpg",
-                        "placeholder-khaki-chinopants2.jpg"
-                    ]
-                },
-                {
-                    "color": "Khaki",
-                    "size": "36",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-khaki-chinopants1.jpg",
-                        "placeholder-khaki-chinopants2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "30",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-navy-chinopants1.jpg",
-                        "placeholder-navy-chinopants2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "32",
-                    "stock": 14,
-                    "images": [
-                        "placeholder-navy-chinopants1.jpg",
-                        "placeholder-navy-chinopants2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "34",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-navy-chinopants1.jpg",
-                        "placeholder-navy-chinopants2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "36",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-navy-chinopants1.jpg",
-                        "placeholder-navy-chinopants2.jpg"
-                    ]
-                }
-            ],
-            "description": "The Chino Pants is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
-        },
-        {
-            "id": 52,
-            "name": "Tailored Suit",
-            "price": 200,
-            "catalog_id": 1013,
-            "total_stock": 67,
-            "total_sold": 30,
-            "variants": [
-                {
-                    "color": "Gray",
-                    "size": "S",
-                    "stock": 5,
-                    "images": [
-                        "placeholder-gray-tailoredsuit1.jpg",
-                        "placeholder-gray-tailoredsuit2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "M",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-gray-tailoredsuit1.jpg",
-                        "placeholder-gray-tailoredsuit2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "L",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-gray-tailoredsuit1.jpg",
-                        "placeholder-gray-tailoredsuit2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "XL",
-                    "stock": 5,
-                    "images": [
-                        "placeholder-gray-tailoredsuit1.jpg",
-                        "placeholder-gray-tailoredsuit2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "S",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-navy-tailoredsuit1.jpg",
-                        "placeholder-navy-tailoredsuit2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "M",
-                    "stock": 9,
-                    "images": [
-                        "placeholder-navy-tailoredsuit1.jpg",
-                        "placeholder-navy-tailoredsuit2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "L",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-navy-tailoredsuit1.jpg",
-                        "placeholder-navy-tailoredsuit2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "XL",
-                    "stock": 7,
-                    "images": [
-                        "placeholder-navy-tailoredsuit1.jpg",
-                        "placeholder-navy-tailoredsuit2.jpg"
-                    ]
-                }
-            ],
-            "description": "Make a statement with the Tailored Suit. Perfect for formal occasions, offering sophistication and class."
-        },
-        {
-            "id": 53,
-            "name": "Silk Tie",
-            "price": 20,
-            "catalog_id": 1013,
-            "total_stock": 75,
-            "total_sold": 40,
-            "variants": [
-                {
-                    "color": "Red",
-                    "size": "Standard",
-                    "stock": 25,
-                    "images": [
-                        "placeholder-red-silktie1.jpg",
-                        "placeholder-red-silktie2.jpg"
-                    ]
-                },
-                {
-                    "color": "Blue",
-                    "size": "Standard",
-                    "stock": 30,
-                    "images": [
-                        "placeholder-blue-silktie1.jpg",
-                        "placeholder-blue-silktie2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "Standard",
-                    "stock": 20,
-                    "images": [
-                        "placeholder-black-silktie1.jpg",
-                        "placeholder-black-silktie2.jpg"
-                    ]
-                }
-            ],
-            "description": "Make a statement with the Silk Tie. Perfect for formal occasions, offering sophistication and class."
-        },
-        {
-            "id": 54,
-            "name": "Oxford Shirt",
-            "price": 45,
-            "catalog_id": 1013,
-            "total_stock": 95,
-            "total_sold": 50,
-            "variants": [
-                {
-                    "color": "White",
-                    "size": "S",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-white-oxfordshirt1.jpg",
-                        "placeholder-white-oxfordshirt2.jpg"
-                    ]
-                },
-                {
-                    "color": "White",
-                    "size": "M",
-                    "stock": 18,
-                    "images": [
-                        "placeholder-white-oxfordshirt1.jpg",
-                        "placeholder-white-oxfordshirt2.jpg"
-                    ]
-                },
-                {
-                    "color": "White",
-                    "size": "L",
-                    "stock": 14,
-                    "images": [
-                        "placeholder-white-oxfordshirt1.jpg",
-                        "placeholder-white-oxfordshirt2.jpg"
-                    ]
-                },
-                {
-                    "color": "White",
-                    "size": "XL",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-white-oxfordshirt1.jpg",
-                        "placeholder-white-oxfordshirt2.jpg"
-                    ]
-                },
-                {
-                    "color": "Light Blue",
-                    "size": "S",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-lightblue-oxfordshirt1.jpg",
-                        "placeholder-lightblue-oxfordshirt2.jpg"
-                    ]
-                },
-                {
-                    "color": "Light Blue",
-                    "size": "M",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-lightblue-oxfordshirt1.jpg",
-                        "placeholder-lightblue-oxfordshirt2.jpg"
-                    ]
-                },
-                {
-                    "color": "Light Blue",
-                    "size": "L",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-lightblue-oxfordshirt1.jpg",
-                        "placeholder-lightblue-oxfordshirt2.jpg"
-                    ]
-                },
-                {
-                    "color": "Light Blue",
-                    "size": "XL",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-lightblue-oxfordshirt1.jpg",
-                        "placeholder-lightblue-oxfordshirt2.jpg"
-                    ]
-                }
-            ],
-            "description": "Make a statement with the Oxford Shirt. Perfect for formal occasions, offering sophistication and class."
-        },
-        {
-            "id": 49,
-            "name": "Graphic Tee",
-            "price": 25,
-            "catalog_id": 1012,
-            "total_stock": 165,
-            "total_sold": 80,
-            "variants": [
-                {
-                    "color": "White",
-                    "size": "S",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-white-graphictee1.jpg",
-                        "placeholder-white-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "White",
-                    "size": "M",
-                    "stock": 20,
-                    "images": [
-                        "placeholder-white-graphictee1.jpg",
-                        "placeholder-white-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "White",
-                    "size": "L",
-                    "stock": 25,
-                    "images": [
-                        "placeholder-white-graphictee1.jpg",
-                        "placeholder-white-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "White",
-                    "size": "XL",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-white-graphictee1.jpg",
-                        "placeholder-white-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "S",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-black-graphictee1.jpg",
-                        "placeholder-black-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "M",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-black-graphictee1.jpg",
-                        "placeholder-black-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "L",
-                    "stock": 20,
-                    "images": [
-                        "placeholder-black-graphictee1.jpg",
-                        "placeholder-black-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "XL",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-black-graphictee1.jpg",
-                        "placeholder-black-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Red",
-                    "size": "S",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-red-graphictee1.jpg",
-                        "placeholder-red-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Red",
-                    "size": "M",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-red-graphictee1.jpg",
-                        "placeholder-red-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Red",
-                    "size": "L",
-                    "stock": 16,
-                    "images": [
-                        "placeholder-red-graphictee1.jpg",
-                        "placeholder-red-graphictee2.jpg"
-                    ]
-                },
-                {
-                    "color": "Red",
-                    "size": "XL",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-red-graphictee1.jpg",
-                        "placeholder-red-graphictee2.jpg"
-                    ]
-                }
-            ],
-            "description": "The Graphic Tee is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
-        },
-        {
-            "id": 50,
-            "name": "Denim Jacket",
-            "price": 60,
-            "catalog_id": 1012,
-            "total_stock": 61,
-            "total_sold": 40,
-            "variants": [
-                {
-                    "color": "Blue",
-                    "size": "M",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-blue-denimjacket1.jpg",
-                        "placeholder-blue-denimjacket2.jpg"
-                    ]
-                },
-                {
-                    "color": "Blue",
-                    "size": "L",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-blue-denimjacket1.jpg",
-                        "placeholder-blue-denimjacket2.jpg"
-                    ]
-                },
-                {
-                    "color": "Blue",
-                    "size": "XL",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-blue-denimjacket1.jpg",
-                        "placeholder-blue-denimjacket2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "M",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-black-denimjacket1.jpg",
-                        "placeholder-black-denimjacket2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "L",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-black-denimjacket1.jpg",
-                        "placeholder-black-denimjacket2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "XL",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-black-denimjacket1.jpg",
-                        "placeholder-black-denimjacket2.jpg"
-                    ]
-                }
-            ],
-            "description": "The Denim Jacket is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
-        },
-        {
-            "id": 51,
-            "name": "Chino Pants",
-            "price": 35,
-            "catalog_id": 1012,
-            "total_stock": 92,
-            "total_sold": 50,
-            "variants": [
-                {
-                    "color": "Khaki",
-                    "size": "30",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-khaki-chinopants1.jpg",
-                        "placeholder-khaki-chinopants2.jpg"
-                    ]
-                },
-                {
-                    "color": "Khaki",
-                    "size": "32",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-khaki-chinopants1.jpg",
-                        "placeholder-khaki-chinopants2.jpg"
-                    ]
-                },
-                {
-                    "color": "Khaki",
-                    "size": "34",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-khaki-chinopants1.jpg",
-                        "placeholder-khaki-chinopants2.jpg"
-                    ]
-                },
-                {
-                    "color": "Khaki",
-                    "size": "36",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-khaki-chinopants1.jpg",
-                        "placeholder-khaki-chinopants2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "30",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-navy-chinopants1.jpg",
-                        "placeholder-navy-chinopants2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "32",
-                    "stock": 14,
-                    "images": [
-                        "placeholder-navy-chinopants1.jpg",
-                        "placeholder-navy-chinopants2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "34",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-navy-chinopants1.jpg",
-                        "placeholder-navy-chinopants2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "36",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-navy-chinopants1.jpg",
-                        "placeholder-navy-chinopants2.jpg"
-                    ]
-                }
-            ],
-            "description": "The Chino Pants is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
-        },
-        {
-            "id": 52,
-            "name": "Tailored Suit",
-            "price": 200,
-            "catalog_id": 1013,
-            "total_stock": 67,
-            "total_sold": 30,
-            "variants": [
-                {
-                    "color": "Gray",
-                    "size": "S",
-                    "stock": 5,
-                    "images": [
-                        "placeholder-gray-tailoredsuit1.jpg",
-                        "placeholder-gray-tailoredsuit2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "M",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-gray-tailoredsuit1.jpg",
-                        "placeholder-gray-tailoredsuit2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "L",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-gray-tailoredsuit1.jpg",
-                        "placeholder-gray-tailoredsuit2.jpg"
-                    ]
-                },
-                {
-                    "color": "Gray",
-                    "size": "XL",
-                    "stock": 5,
-                    "images": [
-                        "placeholder-gray-tailoredsuit1.jpg",
-                        "placeholder-gray-tailoredsuit2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "S",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-navy-tailoredsuit1.jpg",
-                        "placeholder-navy-tailoredsuit2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "M",
-                    "stock": 9,
-                    "images": [
-                        "placeholder-navy-tailoredsuit1.jpg",
-                        "placeholder-navy-tailoredsuit2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "L",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-navy-tailoredsuit1.jpg",
-                        "placeholder-navy-tailoredsuit2.jpg"
-                    ]
-                },
-                {
-                    "color": "Navy",
-                    "size": "XL",
-                    "stock": 7,
-                    "images": [
-                        "placeholder-navy-tailoredsuit1.jpg",
-                        "placeholder-navy-tailoredsuit2.jpg"
-                    ]
-                }
-            ],
-            "description": "Make a statement with the Tailored Suit. Perfect for formal occasions, offering sophistication and class."
-        },
-        {
-            "id": 53,
-            "name": "Silk Tie",
-            "price": 20,
-            "catalog_id": 1013,
-            "total_stock": 75,
-            "total_sold": 40,
-            "variants": [
-                {
-                    "color": "Red",
-                    "size": "Standard",
-                    "stock": 25,
-                    "images": [
-                        "placeholder-red-silktie1.jpg",
-                        "placeholder-red-silktie2.jpg"
-                    ]
-                },
-                {
-                    "color": "Blue",
-                    "size": "Standard",
-                    "stock": 30,
-                    "images": [
-                        "placeholder-blue-silktie1.jpg",
-                        "placeholder-blue-silktie2.jpg"
-                    ]
-                },
-                {
-                    "color": "Black",
-                    "size": "Standard",
-                    "stock": 20,
-                    "images": [
-                        "placeholder-black-silktie1.jpg",
-                        "placeholder-black-silktie2.jpg"
-                    ]
-                }
-            ],
-            "description": "Make a statement with the Silk Tie. Perfect for formal occasions, offering sophistication and class."
-        },
-        {
-            "id": 54,
-            "name": "Oxford Shirt",
-            "price": 45,
-            "catalog_id": 1013,
-            "total_stock": 95,
-            "total_sold": 50,
-            "variants": [
-                {
-                    "color": "White",
-                    "size": "S",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-white-oxfordshirt1.jpg",
-                        "placeholder-white-oxfordshirt2.jpg"
-                    ]
-                },
-                {
-                    "color": "White",
-                    "size": "M",
-                    "stock": 18,
-                    "images": [
-                        "placeholder-white-oxfordshirt1.jpg",
-                        "placeholder-white-oxfordshirt2.jpg"
-                    ]
-                },
-                {
-                    "color": "White",
-                    "size": "L",
-                    "stock": 14,
-                    "images": [
-                        "placeholder-white-oxfordshirt1.jpg",
-                        "placeholder-white-oxfordshirt2.jpg"
-                    ]
-                },
-                {
-                    "color": "White",
-                    "size": "XL",
-                    "stock": 8,
-                    "images": [
-                        "placeholder-white-oxfordshirt1.jpg",
-                        "placeholder-white-oxfordshirt2.jpg"
-                    ]
-                },
-                {
-                    "color": "Light Blue",
-                    "size": "S",
-                    "stock": 10,
-                    "images": [
-                        "placeholder-lightblue-oxfordshirt1.jpg",
-                        "placeholder-lightblue-oxfordshirt2.jpg"
-                    ]
-                },
-                {
-                    "color": "Light Blue",
-                    "size": "M",
-                    "stock": 15,
-                    "images": [
-                        "placeholder-lightblue-oxfordshirt1.jpg",
-                        "placeholder-lightblue-oxfordshirt2.jpg"
-                    ]
-                },
-                {
-                    "color": "Light Blue",
-                    "size": "L",
-                    "stock": 12,
-                    "images": [
-                        "placeholder-lightblue-oxfordshirt1.jpg",
-                        "placeholder-lightblue-oxfordshirt2.jpg"
-                    ]
-                },
-                {
-                    "color": "Light Blue",
-                    "size": "XL",
-                    "stock": 6,
-                    "images": [
-                        "placeholder-lightblue-oxfordshirt1.jpg",
-                        "placeholder-lightblue-oxfordshirt2.jpg"
-                    ]
-                }
-            ],
-            "description": "Make a statement with the Oxford Shirt. Perfect for formal occasions, offering sophistication and class."
+          "color": "Gray",
+          "size": "XL",
+          "stock": 2,
+          "images": [
+            "placeholder-gray-coat1.jpg",
+            "placeholder-gray-coat2.jpg"
+          ]
         }
-    ]
+      ],
+      "description": "Stay warm and elegant with our luxurious Wool Coat. Designed for ultimate comfort and protection against chilly weather, this coat features a tailored fit and high-quality wool blend. The perfect choice for formal events or a chic winter ensemble.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 5,
+      "name": "Hiking Boots",
+      "price": 85,
+      "catalog_id": 1003,
+      "total_stock": 87,
+      "total_sold": 45,
+      "variants": [
+        {
+          "color": "Brown",
+          "size": "8",
+          "stock": 10,
+          "images": [
+            "placeholder-brown-boots1.jpg",
+            "placeholder-brown-boots2.jpg"
+          ]
+        },
+        {
+          "color": "Brown",
+          "size": "9",
+          "stock": 12,
+          "images": [
+            "placeholder-brown-boots1.jpg",
+            "placeholder-brown-boots2.jpg"
+          ]
+        },
+        {
+          "color": "Brown",
+          "size": "10",
+          "stock": 15,
+          "images": [
+            "placeholder-brown-boots1.jpg",
+            "placeholder-brown-boots2.jpg"
+          ]
+        },
+        {
+          "color": "Brown",
+          "size": "11",
+          "stock": 8,
+          "images": [
+            "placeholder-brown-boots1.jpg",
+            "placeholder-brown-boots2.jpg"
+          ]
+        },
+        {
+          "color": "Tan",
+          "size": "8",
+          "stock": 14,
+          "images": [
+            "placeholder-tan-boots1.jpg",
+            "placeholder-tan-boots2.jpg"
+          ]
+        },
+        {
+          "color": "Tan",
+          "size": "9",
+          "stock": 10,
+          "images": [
+            "placeholder-tan-boots1.jpg",
+            "placeholder-tan-boots2.jpg"
+          ]
+        },
+        {
+          "color": "Tan",
+          "size": "10",
+          "stock": 12,
+          "images": [
+            "placeholder-tan-boots1.jpg",
+            "placeholder-tan-boots2.jpg"
+          ]
+        },
+        {
+          "color": "Tan",
+          "size": "11",
+          "stock": 6,
+          "images": [
+            "placeholder-tan-boots1.jpg",
+            "placeholder-tan-boots2.jpg"
+          ]
+        }
+      ],
+      "description": "Conquer any trail with confidence in our rugged Hiking Boots. Engineered for maximum durability and comfort, these boots feature a water-resistant design, reinforced soles, and superior grip. Perfect for outdoor enthusiasts and adventure seekers alike.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 6,
+      "name": "Windbreaker Jacket",
+      "price": 60,
+      "catalog_id": 1003,
+      "total_stock": 94,
+      "total_sold": 60,
+      "variants": [
+        {
+          "color": "Navy",
+          "size": "S",
+          "stock": 12,
+          "images": [
+            "placeholder-navy-windbreaker1.jpg",
+            "placeholder-navy-windbreaker2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "M",
+          "stock": 15,
+          "images": [
+            "placeholder-navy-windbreaker1.jpg",
+            "placeholder-navy-windbreaker2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "L",
+          "stock": 18,
+          "images": [
+            "placeholder-navy-windbreaker1.jpg",
+            "placeholder-navy-windbreaker2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "XL",
+          "stock": 8,
+          "images": [
+            "placeholder-navy-windbreaker1.jpg",
+            "placeholder-navy-windbreaker2.jpg"
+          ]
+        },
+        {
+          "color": "Green",
+          "size": "S",
+          "stock": 10,
+          "images": [
+            "placeholder-green-windbreaker1.jpg",
+            "placeholder-green-windbreaker2.jpg"
+          ]
+        },
+        {
+          "color": "Green",
+          "size": "M",
+          "stock": 14,
+          "images": [
+            "placeholder-green-windbreaker1.jpg",
+            "placeholder-green-windbreaker2.jpg"
+          ]
+        },
+        {
+          "color": "Green",
+          "size": "L",
+          "stock": 12,
+          "images": [
+            "placeholder-green-windbreaker1.jpg",
+            "placeholder-green-windbreaker2.jpg"
+          ]
+        },
+        {
+          "color": "Green",
+          "size": "XL",
+          "stock": 5,
+          "images": [
+            "placeholder-green-windbreaker1.jpg",
+            "placeholder-green-windbreaker2.jpg"
+          ]
+        }
+      ],
+      "description": "The Windbreaker Jacket is ideal for outdoor adventures, combining durability with functional design to keep you prepared for any activity.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 7,
+      "name": "Running Shoes",
+      "price": 75,
+      "catalog_id": 1004,
+      "total_stock": 97,
+      "total_sold": 55,
+      "variants": [
+        {
+          "color": "Gray",
+          "size": "8",
+          "stock": 12,
+          "images": [
+            "placeholder-gray-shoes1.jpg",
+            "placeholder-gray-shoes2.jpg"
+          ]
+        },
+        {
+          "color": "Gray",
+          "size": "9",
+          "stock": 14,
+          "images": [
+            "placeholder-gray-shoes1.jpg",
+            "placeholder-gray-shoes2.jpg"
+          ]
+        },
+        {
+          "color": "Gray",
+          "size": "10",
+          "stock": 16,
+          "images": [
+            "placeholder-gray-shoes1.jpg",
+            "placeholder-gray-shoes2.jpg"
+          ]
+        },
+        {
+          "color": "Gray",
+          "size": "11",
+          "stock": 10,
+          "images": [
+            "placeholder-gray-shoes1.jpg",
+            "placeholder-gray-shoes2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "8",
+          "stock": 10,
+          "images": [
+            "placeholder-black-shoes1.jpg",
+            "placeholder-black-shoes2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "9",
+          "stock": 15,
+          "images": [
+            "placeholder-black-shoes1.jpg",
+            "placeholder-black-shoes2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "10",
+          "stock": 12,
+          "images": [
+            "placeholder-black-shoes1.jpg",
+            "placeholder-black-shoes2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "11",
+          "stock": 8,
+          "images": [
+            "placeholder-black-shoes1.jpg",
+            "placeholder-black-shoes2.jpg"
+          ]
+        }
+      ],
+      "description": "Enhance your performance with the Running Shoes, designed for active lifestyles and built to support your fitness goals.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 8,
+      "name": "Gym Shorts",
+      "price": 25,
+      "catalog_id": 1004,
+      "total_stock": 130,
+      "total_sold": 75,
+      "variants": [
+        {
+          "color": "Black",
+          "size": "S",
+          "stock": 15,
+          "images": [
+            "placeholder-black-shorts1.jpg",
+            "placeholder-black-shorts2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "M",
+          "stock": 20,
+          "images": [
+            "placeholder-black-shorts1.jpg",
+            "placeholder-black-shorts2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "L",
+          "stock": 25,
+          "images": [
+            "placeholder-black-shorts1.jpg",
+            "placeholder-black-shorts2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "XL",
+          "stock": 10,
+          "images": [
+            "placeholder-black-shorts1.jpg",
+            "placeholder-black-shorts2.jpg"
+          ]
+        },
+        {
+          "color": "Blue",
+          "size": "S",
+          "stock": 12,
+          "images": [
+            "placeholder-blue-shorts1.jpg",
+            "placeholder-blue-shorts2.jpg"
+          ]
+        },
+        {
+          "color": "Blue",
+          "size": "M",
+          "stock": 18,
+          "images": [
+            "placeholder-blue-shorts1.jpg",
+            "placeholder-blue-shorts2.jpg"
+          ]
+        },
+        {
+          "color": "Blue",
+          "size": "L",
+          "stock": 22,
+          "images": [
+            "placeholder-blue-shorts1.jpg",
+            "placeholder-blue-shorts2.jpg"
+          ]
+        },
+        {
+          "color": "Blue",
+          "size": "XL",
+          "stock": 8,
+          "images": [
+            "placeholder-blue-shorts1.jpg",
+            "placeholder-blue-shorts2.jpg"
+          ]
+        }
+      ],
+      "description": "Enhance your performance with the Gym Shorts, designed for active lifestyles and built to support your fitness goals.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 31,
+      "name": "Hiking Backpack",
+      "price": 60,
+      "catalog_id": 1006,
+      "total_stock": 77,
+      "total_sold": 30,
+      "variants": [
+        {
+          "color": "Green",
+          "size": "25L",
+          "stock": 15,
+          "images": [
+            "placeholder-green-backpack1.jpg",
+            "placeholder-green-backpack2.jpg"
+          ]
+        },
+        {
+          "color": "Green",
+          "size": "35L",
+          "stock": 10,
+          "images": [
+            "placeholder-green-backpack1.jpg",
+            "placeholder-green-backpack2.jpg"
+          ]
+        },
+        {
+          "color": "Green",
+          "size": "50L",
+          "stock": 8,
+          "images": [
+            "placeholder-green-backpack1.jpg",
+            "placeholder-green-backpack2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "25L",
+          "stock": 20,
+          "images": [
+            "placeholder-black-backpack1.jpg",
+            "placeholder-black-backpack2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "35L",
+          "stock": 14,
+          "images": [
+            "placeholder-black-backpack1.jpg",
+            "placeholder-black-backpack2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "50L",
+          "stock": 10,
+          "images": [
+            "placeholder-black-backpack1.jpg",
+            "placeholder-black-backpack2.jpg"
+          ]
+        }
+      ],
+      "description": "The Hiking Backpack is ideal for outdoor adventures, combining durability with functional design to keep you prepared for any activity.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 32,
+      "name": "Waterproof Hiking Boots",
+      "price": 85,
+      "catalog_id": 1006,
+      "total_stock": 78,
+      "total_sold": 40,
+      "variants": [
+        {
+          "color": "Brown",
+          "size": "8",
+          "stock": 10,
+          "images": [
+            "placeholder-brown-boots1.jpg",
+            "placeholder-brown-boots2.jpg"
+          ]
+        },
+        {
+          "color": "Brown",
+          "size": "9",
+          "stock": 12,
+          "images": [
+            "placeholder-brown-boots1.jpg",
+            "placeholder-brown-boots2.jpg"
+          ]
+        },
+        {
+          "color": "Brown",
+          "size": "10",
+          "stock": 14,
+          "images": [
+            "placeholder-brown-boots1.jpg",
+            "placeholder-brown-boots2.jpg"
+          ]
+        },
+        {
+          "color": "Brown",
+          "size": "11",
+          "stock": 8,
+          "images": [
+            "placeholder-brown-boots1.jpg",
+            "placeholder-brown-boots2.jpg"
+          ]
+        },
+        {
+          "color": "Gray",
+          "size": "8",
+          "stock": 8,
+          "images": [
+            "placeholder-gray-boots1.jpg",
+            "placeholder-gray-boots2.jpg"
+          ]
+        },
+        {
+          "color": "Gray",
+          "size": "9",
+          "stock": 10,
+          "images": [
+            "placeholder-gray-boots1.jpg",
+            "placeholder-gray-boots2.jpg"
+          ]
+        },
+        {
+          "color": "Gray",
+          "size": "10",
+          "stock": 10,
+          "images": [
+            "placeholder-gray-boots1.jpg",
+            "placeholder-gray-boots2.jpg"
+          ]
+        },
+        {
+          "color": "Gray",
+          "size": "11",
+          "stock": 6,
+          "images": [
+            "placeholder-gray-boots1.jpg",
+            "placeholder-gray-boots2.jpg"
+          ]
+        }
+      ],
+      "description": "The Waterproof Hiking Boots is ideal for outdoor adventures, combining durability with functional design to keep you prepared for any activity.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 33,
+      "name": "All-Weather Jacket",
+      "price": 120,
+      "catalog_id": 1006,
+      "total_stock": 72,
+      "total_sold": 35,
+      "variants": [
+        {
+          "color": "Navy",
+          "size": "M",
+          "stock": 12,
+          "images": [
+            "placeholder-navy-jacket1.jpg",
+            "placeholder-navy-jacket2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "L",
+          "stock": 10,
+          "images": [
+            "placeholder-navy-jacket1.jpg",
+            "placeholder-navy-jacket2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "XL",
+          "stock": 6,
+          "images": [
+            "placeholder-navy-jacket1.jpg",
+            "placeholder-navy-jacket2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "M",
+          "stock": 14,
+          "images": [
+            "placeholder-black-jacket1.jpg",
+            "placeholder-black-jacket2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "L",
+          "stock": 12,
+          "images": [
+            "placeholder-black-jacket1.jpg",
+            "placeholder-black-jacket2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "XL",
+          "stock": 8,
+          "images": [
+            "placeholder-black-jacket1.jpg",
+            "placeholder-black-jacket2.jpg"
+          ]
+        }
+      ],
+      "description": "The All-Weather Jacket is ideal for outdoor adventures, combining durability with functional design to keep you prepared for any activity.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 37,
+      "name": "Yoga Mat",
+      "price": 25,
+      "catalog_id": 1008,
+      "total_stock": 83,
+      "total_sold": 40,
+      "variants": [
+        {
+          "color": "Purple",
+          "size": "Standard",
+          "stock": 15,
+          "images": [
+            "placeholder-purple-yogamat1.jpg",
+            "placeholder-purple-yogamat2.jpg"
+          ]
+        },
+        {
+          "color": "Purple",
+          "size": "Extra Thick",
+          "stock": 10,
+          "images": [
+            "placeholder-purple-yogamat1.jpg",
+            "placeholder-purple-yogamat2.jpg"
+          ]
+        },
+        {
+          "color": "Blue",
+          "size": "Standard",
+          "stock": 20,
+          "images": [
+            "placeholder-blue-yogamat1.jpg",
+            "placeholder-blue-yogamat2.jpg"
+          ]
+        },
+        {
+          "color": "Blue",
+          "size": "Extra Thick",
+          "stock": 12,
+          "images": [
+            "placeholder-blue-yogamat1.jpg",
+            "placeholder-blue-yogamat2.jpg"
+          ]
+        },
+        {
+          "color": "Gray",
+          "size": "Standard",
+          "stock": 18,
+          "images": [
+            "placeholder-gray-yogamat1.jpg",
+            "placeholder-gray-yogamat2.jpg"
+          ]
+        },
+        {
+          "color": "Gray",
+          "size": "Extra Thick",
+          "stock": 8,
+          "images": [
+            "placeholder-gray-yogamat1.jpg",
+            "placeholder-gray-yogamat2.jpg"
+          ]
+        }
+      ],
+      "description": "Enhance your performance with the Yoga Mat, designed for active lifestyles and built to support your fitness goals.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 38,
+      "name": "Dumbbell Set",
+      "price": 50,
+      "catalog_id": 1008,
+      "total_stock": 50,
+      "total_sold": 30,
+      "variants": [
+        {
+          "color": "Black",
+          "size": "5kg",
+          "stock": 25,
+          "images": [
+            "placeholder-black-dumbbell1.jpg",
+            "placeholder-black-dumbbell2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "10kg",
+          "stock": 15,
+          "images": [
+            "placeholder-black-dumbbell1.jpg",
+            "placeholder-black-dumbbell2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "15kg",
+          "stock": 10,
+          "images": [
+            "placeholder-black-dumbbell1.jpg",
+            "placeholder-black-dumbbell2.jpg"
+          ]
+        }
+      ],
+      "description": "Enhance your performance with the Dumbbell Set, designed for active lifestyles and built to support your fitness goals.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 39,
+      "name": "Resistance Bands",
+      "price": 20,
+      "catalog_id": 1008,
+      "total_stock": 143,
+      "total_sold": 60,
+      "variants": [
+        {
+          "color": "Red",
+          "size": "Light",
+          "stock": 20,
+          "images": [
+            "placeholder-red-band1.jpg",
+            "placeholder-red-band2.jpg"
+          ]
+        },
+        {
+          "color": "Red",
+          "size": "Medium",
+          "stock": 15,
+          "images": [
+            "placeholder-red-band1.jpg",
+            "placeholder-red-band2.jpg"
+          ]
+        },
+        {
+          "color": "Red",
+          "size": "Heavy",
+          "stock": 10,
+          "images": [
+            "placeholder-red-band1.jpg",
+            "placeholder-red-band2.jpg"
+          ]
+        },
+        {
+          "color": "Yellow",
+          "size": "Light",
+          "stock": 18,
+          "images": [
+            "placeholder-yellow-band1.jpg",
+            "placeholder-yellow-band2.jpg"
+          ]
+        },
+        {
+          "color": "Yellow",
+          "size": "Medium",
+          "stock": 12,
+          "images": [
+            "placeholder-yellow-band1.jpg",
+            "placeholder-yellow-band2.jpg"
+          ]
+        },
+        {
+          "color": "Yellow",
+          "size": "Heavy",
+          "stock": 8,
+          "images": [
+            "placeholder-yellow-band1.jpg",
+            "placeholder-yellow-band2.jpg"
+          ]
+        },
+        {
+          "color": "Green",
+          "size": "Light",
+          "stock": 22,
+          "images": [
+            "placeholder-green-band1.jpg",
+            "placeholder-green-band2.jpg"
+          ]
+        },
+        {
+          "color": "Green",
+          "size": "Medium",
+          "stock": 14,
+          "images": [
+            "placeholder-green-band1.jpg",
+            "placeholder-green-band2.jpg"
+          ]
+        },
+        {
+          "color": "Green",
+          "size": "Heavy",
+          "stock": 9,
+          "images": [
+            "placeholder-green-band1.jpg",
+            "placeholder-green-band2.jpg"
+          ]
+        }
+      ],
+      "description": "Enhance your performance with the Resistance Bands, designed for active lifestyles and built to support your fitness goals.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 40,
+      "name": "Leather Wallet",
+      "price": 45,
+      "catalog_id": 1009,
+      "total_stock": 70,
+      "total_sold": 50,
+      "variants": [
+        {
+          "color": "Brown",
+          "size": "One Size",
+          "stock": 30,
+          "images": [
+            "placeholder-brown-wallet1.jpg",
+            "placeholder-brown-wallet2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "One Size",
+          "stock": 40,
+          "images": [
+            "placeholder-black-wallet1.jpg",
+            "placeholder-black-wallet2.jpg"
+          ]
+        }
+      ],
+      "description": "Elevate your outfit with the Leather Wallet. This accessory combines practicality with timeless elegance.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 41,
+      "name": "Gold-Plated Watch",
+      "price": 300,
+      "catalog_id": 1009,
+      "total_stock": 32,
+      "total_sold": 20,
+      "variants": [
+        {
+          "color": "Gold",
+          "size": "Medium",
+          "stock": 8,
+          "images": [
+            "placeholder-gold-watch1.jpg",
+            "placeholder-gold-watch2.jpg"
+          ]
+        },
+        {
+          "color": "Gold",
+          "size": "Large",
+          "stock": 6,
+          "images": [
+            "placeholder-gold-watch1.jpg",
+            "placeholder-gold-watch2.jpg"
+          ]
+        },
+        {
+          "color": "Silver",
+          "size": "Medium",
+          "stock": 10,
+          "images": [
+            "placeholder-silver-watch1.jpg",
+            "placeholder-silver-watch2.jpg"
+          ]
+        },
+        {
+          "color": "Silver",
+          "size": "Large",
+          "stock": 8,
+          "images": [
+            "placeholder-silver-watch1.jpg",
+            "placeholder-silver-watch2.jpg"
+          ]
+        }
+      ],
+      "description": "Elevate your outfit with the Gold-Plated Watch. This accessory combines practicality with timeless elegance.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 42,
+      "name": "Designer Sunglasses",
+      "price": 150,
+      "catalog_id": 1009,
+      "total_stock": 45,
+      "total_sold": 30,
+      "variants": [
+        {
+          "color": "Black",
+          "size": "One Size",
+          "stock": 25,
+          "images": [
+            "placeholder-black-sunglasses1.jpg",
+            "placeholder-black-sunglasses2.jpg"
+          ]
+        },
+        {
+          "color": "Tortoise Shell",
+          "size": "One Size",
+          "stock": 20,
+          "images": [
+            "placeholder-tortoise-sunglasses1.jpg",
+            "placeholder-tortoise-sunglasses2.jpg"
+          ]
+        }
+      ],
+      "description": "Elevate your outfit with the Designer Sunglasses. This accessory combines practicality with timeless elegance.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 49,
+      "name": "Graphic Tee",
+      "price": 25,
+      "catalog_id": 1012,
+      "total_stock": 165,
+      "total_sold": 80,
+      "variants": [
+        {
+          "color": "White",
+          "size": "S",
+          "stock": 15,
+          "images": [
+            "placeholder-white-graphictee1.jpg",
+            "placeholder-white-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "size": "M",
+          "stock": 20,
+          "images": [
+            "placeholder-white-graphictee1.jpg",
+            "placeholder-white-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "size": "L",
+          "stock": 25,
+          "images": [
+            "placeholder-white-graphictee1.jpg",
+            "placeholder-white-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "size": "XL",
+          "stock": 10,
+          "images": [
+            "placeholder-white-graphictee1.jpg",
+            "placeholder-white-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "S",
+          "stock": 10,
+          "images": [
+            "placeholder-black-graphictee1.jpg",
+            "placeholder-black-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "M",
+          "stock": 15,
+          "images": [
+            "placeholder-black-graphictee1.jpg",
+            "placeholder-black-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "L",
+          "stock": 20,
+          "images": [
+            "placeholder-black-graphictee1.jpg",
+            "placeholder-black-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "XL",
+          "stock": 8,
+          "images": [
+            "placeholder-black-graphictee1.jpg",
+            "placeholder-black-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Red",
+          "size": "S",
+          "stock": 8,
+          "images": [
+            "placeholder-red-graphictee1.jpg",
+            "placeholder-red-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Red",
+          "size": "M",
+          "stock": 12,
+          "images": [
+            "placeholder-red-graphictee1.jpg",
+            "placeholder-red-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Red",
+          "size": "L",
+          "stock": 16,
+          "images": [
+            "placeholder-red-graphictee1.jpg",
+            "placeholder-red-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Red",
+          "size": "XL",
+          "stock": 6,
+          "images": [
+            "placeholder-red-graphictee1.jpg",
+            "placeholder-red-graphictee2.jpg"
+          ]
+        }
+      ],
+      "description": "The Graphic Tee is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 50,
+      "name": "Denim Jacket",
+      "price": 60,
+      "catalog_id": 1012,
+      "total_stock": 61,
+      "total_sold": 40,
+      "variants": [
+        {
+          "color": "Blue",
+          "size": "M",
+          "stock": 10,
+          "images": [
+            "placeholder-blue-denimjacket1.jpg",
+            "placeholder-blue-denimjacket2.jpg"
+          ]
+        },
+        {
+          "color": "Blue",
+          "size": "L",
+          "stock": 15,
+          "images": [
+            "placeholder-blue-denimjacket1.jpg",
+            "placeholder-blue-denimjacket2.jpg"
+          ]
+        },
+        {
+          "color": "Blue",
+          "size": "XL",
+          "stock": 8,
+          "images": [
+            "placeholder-blue-denimjacket1.jpg",
+            "placeholder-blue-denimjacket2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "M",
+          "stock": 12,
+          "images": [
+            "placeholder-black-denimjacket1.jpg",
+            "placeholder-black-denimjacket2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "L",
+          "stock": 10,
+          "images": [
+            "placeholder-black-denimjacket1.jpg",
+            "placeholder-black-denimjacket2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "XL",
+          "stock": 6,
+          "images": [
+            "placeholder-black-denimjacket1.jpg",
+            "placeholder-black-denimjacket2.jpg"
+          ]
+        }
+      ],
+      "description": "The Denim Jacket is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 51,
+      "name": "Chino Pants",
+      "price": 35,
+      "catalog_id": 1012,
+      "total_stock": 92,
+      "total_sold": 50,
+      "variants": [
+        {
+          "color": "Khaki",
+          "size": "30",
+          "stock": 10,
+          "images": [
+            "placeholder-khaki-chinopants1.jpg",
+            "placeholder-khaki-chinopants2.jpg"
+          ]
+        },
+        {
+          "color": "Khaki",
+          "size": "32",
+          "stock": 15,
+          "images": [
+            "placeholder-khaki-chinopants1.jpg",
+            "placeholder-khaki-chinopants2.jpg"
+          ]
+        },
+        {
+          "color": "Khaki",
+          "size": "34",
+          "stock": 12,
+          "images": [
+            "placeholder-khaki-chinopants1.jpg",
+            "placeholder-khaki-chinopants2.jpg"
+          ]
+        },
+        {
+          "color": "Khaki",
+          "size": "36",
+          "stock": 8,
+          "images": [
+            "placeholder-khaki-chinopants1.jpg",
+            "placeholder-khaki-chinopants2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "30",
+          "stock": 12,
+          "images": [
+            "placeholder-navy-chinopants1.jpg",
+            "placeholder-navy-chinopants2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "32",
+          "stock": 14,
+          "images": [
+            "placeholder-navy-chinopants1.jpg",
+            "placeholder-navy-chinopants2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "34",
+          "stock": 10,
+          "images": [
+            "placeholder-navy-chinopants1.jpg",
+            "placeholder-navy-chinopants2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "36",
+          "stock": 6,
+          "images": [
+            "placeholder-navy-chinopants1.jpg",
+            "placeholder-navy-chinopants2.jpg"
+          ]
+        }
+      ],
+      "description": "The Chino Pants is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 52,
+      "name": "Tailored Suit",
+      "price": 200,
+      "catalog_id": 1013,
+      "total_stock": 67,
+      "total_sold": 30,
+      "variants": [
+        {
+          "color": "Gray",
+          "size": "S",
+          "stock": 5,
+          "images": [
+            "placeholder-gray-tailoredsuit1.jpg",
+            "placeholder-gray-tailoredsuit2.jpg"
+          ]
+        },
+        {
+          "color": "Gray",
+          "size": "M",
+          "stock": 8,
+          "images": [
+            "placeholder-gray-tailoredsuit1.jpg",
+            "placeholder-gray-tailoredsuit2.jpg"
+          ]
+        },
+        {
+          "color": "Gray",
+          "size": "L",
+          "stock": 10,
+          "images": [
+            "placeholder-gray-tailoredsuit1.jpg",
+            "placeholder-gray-tailoredsuit2.jpg"
+          ]
+        },
+        {
+          "color": "Gray",
+          "size": "XL",
+          "stock": 5,
+          "images": [
+            "placeholder-gray-tailoredsuit1.jpg",
+            "placeholder-gray-tailoredsuit2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "S",
+          "stock": 6,
+          "images": [
+            "placeholder-navy-tailoredsuit1.jpg",
+            "placeholder-navy-tailoredsuit2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "M",
+          "stock": 9,
+          "images": [
+            "placeholder-navy-tailoredsuit1.jpg",
+            "placeholder-navy-tailoredsuit2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "L",
+          "stock": 12,
+          "images": [
+            "placeholder-navy-tailoredsuit1.jpg",
+            "placeholder-navy-tailoredsuit2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "XL",
+          "stock": 7,
+          "images": [
+            "placeholder-navy-tailoredsuit1.jpg",
+            "placeholder-navy-tailoredsuit2.jpg"
+          ]
+        }
+      ],
+      "description": "Make a statement with the Tailored Suit. Perfect for formal occasions, offering sophistication and class.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 53,
+      "name": "Silk Tie",
+      "price": 20,
+      "catalog_id": 1013,
+      "total_stock": 75,
+      "total_sold": 40,
+      "variants": [
+        {
+          "color": "Red",
+          "size": "Standard",
+          "stock": 25,
+          "images": [
+            "placeholder-red-silktie1.jpg",
+            "placeholder-red-silktie2.jpg"
+          ]
+        },
+        {
+          "color": "Blue",
+          "size": "Standard",
+          "stock": 30,
+          "images": [
+            "placeholder-blue-silktie1.jpg",
+            "placeholder-blue-silktie2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "Standard",
+          "stock": 20,
+          "images": [
+            "placeholder-black-silktie1.jpg",
+            "placeholder-black-silktie2.jpg"
+          ]
+        }
+      ],
+      "description": "Make a statement with the Silk Tie. Perfect for formal occasions, offering sophistication and class.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 54,
+      "name": "Oxford Shirt",
+      "price": 45,
+      "catalog_id": 1013,
+      "total_stock": 95,
+      "total_sold": 50,
+      "variants": [
+        {
+          "color": "White",
+          "size": "S",
+          "stock": 12,
+          "images": [
+            "placeholder-white-oxfordshirt1.jpg",
+            "placeholder-white-oxfordshirt2.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "size": "M",
+          "stock": 18,
+          "images": [
+            "placeholder-white-oxfordshirt1.jpg",
+            "placeholder-white-oxfordshirt2.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "size": "L",
+          "stock": 14,
+          "images": [
+            "placeholder-white-oxfordshirt1.jpg",
+            "placeholder-white-oxfordshirt2.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "size": "XL",
+          "stock": 8,
+          "images": [
+            "placeholder-white-oxfordshirt1.jpg",
+            "placeholder-white-oxfordshirt2.jpg"
+          ]
+        },
+        {
+          "color": "Light Blue",
+          "size": "S",
+          "stock": 10,
+          "images": [
+            "placeholder-lightblue-oxfordshirt1.jpg",
+            "placeholder-lightblue-oxfordshirt2.jpg"
+          ]
+        },
+        {
+          "color": "Light Blue",
+          "size": "M",
+          "stock": 15,
+          "images": [
+            "placeholder-lightblue-oxfordshirt1.jpg",
+            "placeholder-lightblue-oxfordshirt2.jpg"
+          ]
+        },
+        {
+          "color": "Light Blue",
+          "size": "L",
+          "stock": 12,
+          "images": [
+            "placeholder-lightblue-oxfordshirt1.jpg",
+            "placeholder-lightblue-oxfordshirt2.jpg"
+          ]
+        },
+        {
+          "color": "Light Blue",
+          "size": "XL",
+          "stock": 6,
+          "images": [
+            "placeholder-lightblue-oxfordshirt1.jpg",
+            "placeholder-lightblue-oxfordshirt2.jpg"
+          ]
+        }
+      ],
+      "description": "Make a statement with the Oxford Shirt. Perfect for formal occasions, offering sophistication and class.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 49,
+      "name": "Graphic Tee",
+      "price": 25,
+      "catalog_id": 1012,
+      "total_stock": 165,
+      "total_sold": 80,
+      "variants": [
+        {
+          "color": "White",
+          "size": "S",
+          "stock": 15,
+          "images": [
+            "placeholder-white-graphictee1.jpg",
+            "placeholder-white-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "size": "M",
+          "stock": 20,
+          "images": [
+            "placeholder-white-graphictee1.jpg",
+            "placeholder-white-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "size": "L",
+          "stock": 25,
+          "images": [
+            "placeholder-white-graphictee1.jpg",
+            "placeholder-white-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "size": "XL",
+          "stock": 10,
+          "images": [
+            "placeholder-white-graphictee1.jpg",
+            "placeholder-white-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "S",
+          "stock": 10,
+          "images": [
+            "placeholder-black-graphictee1.jpg",
+            "placeholder-black-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "M",
+          "stock": 15,
+          "images": [
+            "placeholder-black-graphictee1.jpg",
+            "placeholder-black-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "L",
+          "stock": 20,
+          "images": [
+            "placeholder-black-graphictee1.jpg",
+            "placeholder-black-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "XL",
+          "stock": 8,
+          "images": [
+            "placeholder-black-graphictee1.jpg",
+            "placeholder-black-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Red",
+          "size": "S",
+          "stock": 8,
+          "images": [
+            "placeholder-red-graphictee1.jpg",
+            "placeholder-red-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Red",
+          "size": "M",
+          "stock": 12,
+          "images": [
+            "placeholder-red-graphictee1.jpg",
+            "placeholder-red-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Red",
+          "size": "L",
+          "stock": 16,
+          "images": [
+            "placeholder-red-graphictee1.jpg",
+            "placeholder-red-graphictee2.jpg"
+          ]
+        },
+        {
+          "color": "Red",
+          "size": "XL",
+          "stock": 6,
+          "images": [
+            "placeholder-red-graphictee1.jpg",
+            "placeholder-red-graphictee2.jpg"
+          ]
+        }
+      ],
+      "description": "The Graphic Tee is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 50,
+      "name": "Denim Jacket",
+      "price": 60,
+      "catalog_id": 1012,
+      "total_stock": 61,
+      "total_sold": 40,
+      "variants": [
+        {
+          "color": "Blue",
+          "size": "M",
+          "stock": 10,
+          "images": [
+            "placeholder-blue-denimjacket1.jpg",
+            "placeholder-blue-denimjacket2.jpg"
+          ]
+        },
+        {
+          "color": "Blue",
+          "size": "L",
+          "stock": 15,
+          "images": [
+            "placeholder-blue-denimjacket1.jpg",
+            "placeholder-blue-denimjacket2.jpg"
+          ]
+        },
+        {
+          "color": "Blue",
+          "size": "XL",
+          "stock": 8,
+          "images": [
+            "placeholder-blue-denimjacket1.jpg",
+            "placeholder-blue-denimjacket2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "M",
+          "stock": 12,
+          "images": [
+            "placeholder-black-denimjacket1.jpg",
+            "placeholder-black-denimjacket2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "L",
+          "stock": 10,
+          "images": [
+            "placeholder-black-denimjacket1.jpg",
+            "placeholder-black-denimjacket2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "XL",
+          "stock": 6,
+          "images": [
+            "placeholder-black-denimjacket1.jpg",
+            "placeholder-black-denimjacket2.jpg"
+          ]
+        }
+      ],
+      "description": "The Denim Jacket is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 51,
+      "name": "Chino Pants",
+      "price": 35,
+      "catalog_id": 1012,
+      "total_stock": 92,
+      "total_sold": 50,
+      "variants": [
+        {
+          "color": "Khaki",
+          "size": "30",
+          "stock": 10,
+          "images": [
+            "placeholder-khaki-chinopants1.jpg",
+            "placeholder-khaki-chinopants2.jpg"
+          ]
+        },
+        {
+          "color": "Khaki",
+          "size": "32",
+          "stock": 15,
+          "images": [
+            "placeholder-khaki-chinopants1.jpg",
+            "placeholder-khaki-chinopants2.jpg"
+          ]
+        },
+        {
+          "color": "Khaki",
+          "size": "34",
+          "stock": 12,
+          "images": [
+            "placeholder-khaki-chinopants1.jpg",
+            "placeholder-khaki-chinopants2.jpg"
+          ]
+        },
+        {
+          "color": "Khaki",
+          "size": "36",
+          "stock": 8,
+          "images": [
+            "placeholder-khaki-chinopants1.jpg",
+            "placeholder-khaki-chinopants2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "30",
+          "stock": 12,
+          "images": [
+            "placeholder-navy-chinopants1.jpg",
+            "placeholder-navy-chinopants2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "32",
+          "stock": 14,
+          "images": [
+            "placeholder-navy-chinopants1.jpg",
+            "placeholder-navy-chinopants2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "34",
+          "stock": 10,
+          "images": [
+            "placeholder-navy-chinopants1.jpg",
+            "placeholder-navy-chinopants2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "36",
+          "stock": 6,
+          "images": [
+            "placeholder-navy-chinopants1.jpg",
+            "placeholder-navy-chinopants2.jpg"
+          ]
+        }
+      ],
+      "description": "The Chino Pants is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 52,
+      "name": "Tailored Suit",
+      "price": 200,
+      "catalog_id": 1013,
+      "total_stock": 67,
+      "total_sold": 30,
+      "variants": [
+        {
+          "color": "Gray",
+          "size": "S",
+          "stock": 5,
+          "images": [
+            "placeholder-gray-tailoredsuit1.jpg",
+            "placeholder-gray-tailoredsuit2.jpg"
+          ]
+        },
+        {
+          "color": "Gray",
+          "size": "M",
+          "stock": 8,
+          "images": [
+            "placeholder-gray-tailoredsuit1.jpg",
+            "placeholder-gray-tailoredsuit2.jpg"
+          ]
+        },
+        {
+          "color": "Gray",
+          "size": "L",
+          "stock": 10,
+          "images": [
+            "placeholder-gray-tailoredsuit1.jpg",
+            "placeholder-gray-tailoredsuit2.jpg"
+          ]
+        },
+        {
+          "color": "Gray",
+          "size": "XL",
+          "stock": 5,
+          "images": [
+            "placeholder-gray-tailoredsuit1.jpg",
+            "placeholder-gray-tailoredsuit2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "S",
+          "stock": 6,
+          "images": [
+            "placeholder-navy-tailoredsuit1.jpg",
+            "placeholder-navy-tailoredsuit2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "M",
+          "stock": 9,
+          "images": [
+            "placeholder-navy-tailoredsuit1.jpg",
+            "placeholder-navy-tailoredsuit2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "L",
+          "stock": 12,
+          "images": [
+            "placeholder-navy-tailoredsuit1.jpg",
+            "placeholder-navy-tailoredsuit2.jpg"
+          ]
+        },
+        {
+          "color": "Navy",
+          "size": "XL",
+          "stock": 7,
+          "images": [
+            "placeholder-navy-tailoredsuit1.jpg",
+            "placeholder-navy-tailoredsuit2.jpg"
+          ]
+        }
+      ],
+      "description": "Make a statement with the Tailored Suit. Perfect for formal occasions, offering sophistication and class.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 53,
+      "name": "Silk Tie",
+      "price": 20,
+      "catalog_id": 1013,
+      "total_stock": 75,
+      "total_sold": 40,
+      "variants": [
+        {
+          "color": "Red",
+          "size": "Standard",
+          "stock": 25,
+          "images": [
+            "placeholder-red-silktie1.jpg",
+            "placeholder-red-silktie2.jpg"
+          ]
+        },
+        {
+          "color": "Blue",
+          "size": "Standard",
+          "stock": 30,
+          "images": [
+            "placeholder-blue-silktie1.jpg",
+            "placeholder-blue-silktie2.jpg"
+          ]
+        },
+        {
+          "color": "Black",
+          "size": "Standard",
+          "stock": 20,
+          "images": [
+            "placeholder-black-silktie1.jpg",
+            "placeholder-black-silktie2.jpg"
+          ]
+        }
+      ],
+      "description": "Make a statement with the Silk Tie. Perfect for formal occasions, offering sophistication and class.",
+      "subcategory_id": 101,
+      "category_id": 1
+    },
+    {
+      "id": 54,
+      "name": "Oxford Shirt",
+      "price": 45,
+      "catalog_id": 1013,
+      "total_stock": 95,
+      "total_sold": 50,
+      "variants": [
+        {
+          "color": "White",
+          "size": "S",
+          "stock": 12,
+          "images": [
+            "placeholder-white-oxfordshirt1.jpg",
+            "placeholder-white-oxfordshirt2.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "size": "M",
+          "stock": 18,
+          "images": [
+            "placeholder-white-oxfordshirt1.jpg",
+            "placeholder-white-oxfordshirt2.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "size": "L",
+          "stock": 14,
+          "images": [
+            "placeholder-white-oxfordshirt1.jpg",
+            "placeholder-white-oxfordshirt2.jpg"
+          ]
+        },
+        {
+          "color": "White",
+          "size": "XL",
+          "stock": 8,
+          "images": [
+            "placeholder-white-oxfordshirt1.jpg",
+            "placeholder-white-oxfordshirt2.jpg"
+          ]
+        },
+        {
+          "color": "Light Blue",
+          "size": "S",
+          "stock": 10,
+          "images": [
+            "placeholder-lightblue-oxfordshirt1.jpg",
+            "placeholder-lightblue-oxfordshirt2.jpg"
+          ]
+        },
+        {
+          "color": "Light Blue",
+          "size": "M",
+          "stock": 15,
+          "images": [
+            "placeholder-lightblue-oxfordshirt1.jpg",
+            "placeholder-lightblue-oxfordshirt2.jpg"
+          ]
+        },
+        {
+          "color": "Light Blue",
+          "size": "L",
+          "stock": 12,
+          "images": [
+            "placeholder-lightblue-oxfordshirt1.jpg",
+            "placeholder-lightblue-oxfordshirt2.jpg"
+          ]
+        },
+        {
+          "color": "Light Blue",
+          "size": "XL",
+          "stock": 6,
+          "images": [
+            "placeholder-lightblue-oxfordshirt1.jpg",
+            "placeholder-lightblue-oxfordshirt2.jpg"
+          ]
+        }
+      ],
+      "description": "Make a statement with the Oxford Shirt. Perfect for formal occasions, offering sophistication and class.",
+      "subcategory_id": 101,
+      "category_id": 1
+    }
+  ]
 }
