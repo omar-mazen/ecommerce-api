@@ -58,26 +58,28 @@ server.use((req, res, next) => {
     req.query._order = req.query.order || "asc";
   }
 
-  // Handle grouping by catalog_id, subcategory_id, or category_id
-  if (
-    req.query.group_by &&
-    ["catalog_id", "subcategory_id", "category_id"].includes(req.query.group_by)
-  ) {
+  // Group by category_id, subcategory_id, or catalog_id
+  if (req.query.group_by && ["catalog_id", "subcategory_id", "category_id"].includes(req.query.group_by)) {
     const data = router.db.get(req.path.replace("/api/", "")).value();
 
     const groupedData = data.reduce((acc, item) => {
       const key = item[req.query.group_by];
-      if (!acc[key]) {
-        const groupName = getGroupNameById(req.query.group_by, key);
-        acc[key] = { id: key, name: groupName || `Unknown ${req.query.group_by}`, items: [] };
+      if (key !== undefined) {
+        if (!acc[key]) {
+          const groupName = getGroupNameById(req.query.group_by, key);
+          acc[key] = {
+            id: key,
+            name: groupName || `Unknown ${req.query.group_by.replace("_id", "")}`,
+            items: [],
+          };
+        }
+        acc[key].items.push(item);
       }
-      acc[key].items.push(item);
       return acc;
     }, {});
 
     return res.json(Object.values(groupedData));
   }
-
   next();
 });
 
