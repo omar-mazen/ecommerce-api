@@ -14,7 +14,7 @@ const server = jsonServer.create();
 // Comment out to allow write operations
 const router = jsonServer.router("db.json");
 
-const middlewares = jsonServer.defaults({ readOnly });
+const middlewares = jsonServer.defaults({ readOnly:true });
 
 server.use(middlewares);
 // Add this before server.use(router)
