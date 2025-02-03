@@ -59,24 +59,38 @@ server.use((req, res, next) => {
   }
 
   // Handle grouping by catalog_id, subcategory_id, or category_id
-  if (req.query.group_by && ["catalog_id", "subcategory_id", "category_id"].includes(req.query.group_by)) {
+  if (
+    req.query.group_by &&
+    ["catalog_id", "subcategory_id", "category_id"].includes(req.query.group_by)
+  ) {
     const data = router.db.get(req.path.replace("/api/", "")).value();
 
     const groupedData = data.reduce((acc, item) => {
       const key = item[req.query.group_by];
-      if (!acc[key]) acc[key] = [];
-      acc[key].push(item);
+      if (!acc[key]) {
+        const groupName = getGroupNameById(req.query.group_by, key);
+        acc[key] = { id: key, name: groupName, items: [] };
+      }
+      acc[key].items.push(item);
       return acc;
     }, {});
 
-    return res.json(groupedData);
+    return res.json(Object.values(groupedData));
   }
 
   next();
 });
 
+// Helper function to get group names based on ID
+function getGroupNameById(groupType, id) {
+  const collection = groupType.replace("_id", "s");
+  const record = router.db.get(collection).find({ id: parseInt(id) }).value();
+  return record ? record.name : "Unknown";
+}
+
 // Route all API requests through /api
 server.use("/api", router);
+
 server.listen(3000, () => {
   console.log("JSON Server is running");
 });
