@@ -25,36 +25,18 @@ server.use((req, res, next) => {
     if (req.query.price_lte) {
       priceQuery.$lte = parseFloat(req.query.price_lte);
     }
-    req.query.price = priceQuery;
+
+    router.db.get("products").forEach((product) => {
+      if (
+        (priceQuery.$gte && product.price >= priceQuery.$gte) ||
+        (priceQuery.$lte && product.price <= priceQuery.$lte)
+      ) {
+        return product;
+      }
+    });
+
     delete req.query.price_gte;
     delete req.query.price_lte;
-  }
-
-  // Filter by catalog_id, category_id, subcategory_id
-  if (req.query.catalog_id) {
-    req.query.catalog_id = parseInt(req.query.catalog_id);
-  }
-  if (req.query.category_id) {
-    req.query.category_id = parseInt(req.query.category_id);
-  }
-  if (req.query.subcategory_id) {
-    req.query.subcategory_id = parseInt(req.query.subcategory_id);
-  }
-
-  // Pagination (per_page, page)
-  if (req.query.page) {
-    req.query._page = req.query.page;
-  }
-  if (req.query.per_page) {
-    req.query._limit = req.query.per_page;
-  }
-
-  // Sorting
-  if (req.query.sort) {
-    req.query._sort = req.query.sort;
-  }
-  if (req.query.order) {
-    req.query._order = req.query.order || "asc";
   }
 
   next();
