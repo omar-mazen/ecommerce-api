@@ -18,25 +18,40 @@ server.use((req, res, next) => {
 
   // Price range filter handling
   if (req.query.price_gte || req.query.price_lte) {
-    let priceQuery = {};
-    if (req.query.price_gte) {
-      priceQuery.$gte = parseFloat(req.query.price_gte);
-    }
-    if (req.query.price_lte) {
-      priceQuery.$lte = parseFloat(req.query.price_lte);
-    }
-
+    const priceGte = parseFloat(req.query.price_gte) || -Infinity;
+    const priceLte = parseFloat(req.query.price_lte) || Infinity;
     router.db.get("products").forEach((product) => {
-      if (
-        (priceQuery.$gte && product.price >= priceQuery.$gte) ||
-        (priceQuery.$lte && product.price <= priceQuery.$lte)
-      ) {
+      if (product.price >= priceGte && product.price <= priceLte) {
         return product;
       }
     });
+  }
 
-    delete req.query.price_gte;
-    delete req.query.price_lte;
+  // Filter by catalog_id, category_id, subcategory_id
+  if (req.query.catalog_id) {
+    req.query.catalog_id = parseInt(req.query.catalog_id);
+  }
+  if (req.query.category_id) {
+    req.query.category_id = parseInt(req.query.category_id);
+  }
+  if (req.query.subcategory_id) {
+    req.query.subcategory_id = parseInt(req.query.subcategory_id);
+  }
+
+  // Pagination (per_page, page)
+  if (req.query.page) {
+    req.query._page = req.query.page;
+  }
+  if (req.query.per_page) {
+    req.query._limit = req.query.per_page;
+  }
+
+  // Sorting
+  if (req.query.sort) {
+    req.query._sort = req.query.sort;
+  }
+  if (req.query.order) {
+    req.query._order = req.query.order || "asc";
   }
 
   next();
