@@ -59,7 +59,7 @@ server.use((req, res, next) => {
   }
 
   // Group by category_id, subcategory_id, or catalog_id
-  if (req.query.group_by && ["catalog_id", "subcategory_id", "category_id"].includes(req.query.group_by)) {
+    if (req.query.group_by && ["catalog_id", "subcategory_id", "category_id"].includes(req.query.group_by)) {
     const data = router.db.get(req.path.replace("/api/", "")).value();
 
     const groupedData = data.reduce((acc, item) => {
@@ -80,6 +80,7 @@ server.use((req, res, next) => {
 
     return res.json(Object.values(groupedData));
   }
+
   next();
 });
 
