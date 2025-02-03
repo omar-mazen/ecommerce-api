@@ -69,12 +69,13 @@ server.use((req, res, next) => {
       const key = item[req.query.group_by];
       if (!acc[key]) {
         const groupName = getGroupNameById(req.query.group_by, key);
-        acc[key] = { id: key, name: groupName, items: [] };
+        acc[key] = { id: key, name: groupName || `Unknown ${req.query.group_by}`, items: [] };
       }
       acc[key].items.push(item);
       return acc;
     }, {});
- return res.json(Object.values(groupedData));
+
+    return res.json(Object.values(groupedData));
   }
 
   next();
