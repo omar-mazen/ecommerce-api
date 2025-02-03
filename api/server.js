@@ -16,13 +16,17 @@ server.use((req, res, next) => {
     }
   });
 
-  // Handle price range (e.g., price_gte, price_lte)
-  if (req.query.price_gte) {
-    req.query.price = { $gte: req.query.price_gte };
+  // Price range filter handling
+  if (req.query.price_gte || req.query.price_lte) {
+    let priceQuery = {};
+    if (req.query.price_gte) {
+      priceQuery.$gte = parseFloat(req.query.price_gte);
+    }
+    if (req.query.price_lte) {
+      priceQuery.$lte = parseFloat(req.query.price_lte);
+    }
+    req.query.price = priceQuery;
     delete req.query.price_gte;
-  }
-  if (req.query.price_lte) {
-    req.query.price = { ...req.query.price, $lte: req.query.price_lte };
     delete req.query.price_lte;
   }
 
