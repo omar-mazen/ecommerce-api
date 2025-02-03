@@ -5,9 +5,9 @@ const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 
-// Custom query handling
+// Middleware for custom query handling, filtering, sorting, pagination, and grouping
 server.use((req, res, next) => {
-  // Handle query parameter sanitization
+  // Normalize query parameters by removing underscores
   Object.keys(req.query).forEach((key) => {
     const newKey = key.startsWith("_") ? key.slice(1) : key;
     if (newKey !== key) {
@@ -16,57 +16,67 @@ server.use((req, res, next) => {
     }
   });
 
-  // Price filter handling
+  // Price range filter handling
   if (req.query.price_gte || req.query.price_lte) {
     const priceGte = parseFloat(req.query.price_gte) || -Infinity;
     const priceLte = parseFloat(req.query.price_lte) || Infinity;
-    req.query.price = { $gte: priceGte, $lte: priceLte };
+    req.query.price = (value) => value >= priceGte && value <= priceLte;
   }
 
-  // Filter by category, subcategory, and catalog IDs
-  ["catalog_id", "category_id", "subcategory_id"].forEach((key) => {
-    if (req.query[key]) {
-      req.query[key] = parseInt(req.query[key]);
+  // Filter by color
+  if (req.query.color) {
+    const colors = req.query.color.split(",");
+    req.query.color = (value) => colors.includes(value);
+  }
+
+  // Filter by size
+  if (req.query.size) {
+    const sizes = req.query.size.split(",");
+    req.query.size = (value) => sizes.includes(value);
+  }
+
+  // Convert numeric query parameters
+  ["catalog_id", "category_id", "subcategory_id"].forEach((param) => {
+    if (req.query[param]) {
+      req.query[param] = parseInt(req.query[param]);
     }
   });
 
-  // Handle color filtering
-  if (req.query.color) {
-    const colors = req.query.color.split(",");
-    req.query["variants.color"] = { $in: colors };
+  // Handle pagination
+  if (req.query.page) {
+    req.query._page = req.query.page;
+  }
+  if (req.query.per_page) {
+    req.query._limit = req.query.per_page;
   }
 
-  // Handle size filtering
-  if (req.query.size) {
-    const sizes = req.query.size.split(",");
-    req.query["variants.size"] = { $in: sizes };
+  // Handle sorting
+  if (req.query.sort) {
+    req.query._sort = req.query.sort;
+  }
+  if (req.query.order) {
+    req.query._order = req.query.order || "asc";
   }
 
-  // Pagination (per_page, page)
-  if (req.query.page) req.query._page = req.query.page;
-  if (req.query.per_page) req.query._limit = req.query.per_page;
+  // Handle grouping by catalog_id, subcategory_id, or category_id
+  if (req.query.group_by && ["catalog_id", "subcategory_id", "category_id"].includes(req.query.group_by)) {
+    const data = router.db.get(req.path.replace("/api/", "")).value();
 
-  // Sorting
-  if (req.query.sort) req.query._sort = req.query.sort;
-  if (req.query.order) req.query._order = req.query.order || "asc";
+    const groupedData = data.reduce((acc, item) => {
+      const key = item[req.query.group_by];
+      if (!acc[key]) acc[key] = [];
+      acc[key].push(item);
+      return acc;
+    }, {});
 
-  // Embed relationships for catalogs
-  if (req.path.includes("/catalogs") && req.query.category_id) {
-    const categoryId = parseInt(req.query.category_id);
-    const catalogs = router.db
-      .get("catalogs")
-      .filter((catalog) => catalog.category_id === categoryId)
-      .value();
-
-    return res.json(catalogs);
+    return res.json(groupedData);
   }
 
   next();
 });
 
-// Use the router for all API routes
+// Route all API requests through /api
 server.use("/api", router);
-
 server.listen(3000, () => {
   console.log("JSON Server is running");
 });
