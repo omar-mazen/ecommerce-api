@@ -5,9 +5,9 @@ const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 
-// Custom query handling for filtering, pagination, sorting, and ranges
+// Custom query handling
 server.use((req, res, next) => {
-  // Remove underscores from query parameters
+  // Handle query parameter sanitization
   Object.keys(req.query).forEach((key) => {
     const newKey = key.startsWith("_") ? key.slice(1) : key;
     if (newKey !== key) {
@@ -16,99 +16,59 @@ server.use((req, res, next) => {
     }
   });
 
-  // Price range filter handling
+  // Price filter handling
   if (req.query.price_gte || req.query.price_lte) {
     const priceGte = parseFloat(req.query.price_gte) || -Infinity;
     const priceLte = parseFloat(req.query.price_lte) || Infinity;
-    router.db.get("products").forEach((product) => {
-      if (product.price >= priceGte && product.price <= priceLte) {
-        return product;
-      }
-    });
+    req.query.price = { $gte: priceGte, $lte: priceLte };
   }
-if (req.query.color) {
-    const colors = req.query.color.split(","); // Assuming colors are passed as a comma-separated string
-    router.db.get("products").forEach((product) => {
-      if (product.variants && product.variants.some((variant) => colors.includes(variant.color))) {
-        return product;
-      }
-    });
-  }
-if (req.query.size) {
-  const sizes = req.query.size.split(","); // Assuming sizes are passed as a comma-separated string
-  router.db.get("products").forEach((product) => {
-    if (product.variants && product.variants.some((variant) => sizes.includes(variant.size))) {
-      return product;
+
+  // Filter by category, subcategory, and catalog IDs
+  ["catalog_id", "category_id", "subcategory_id"].forEach((key) => {
+    if (req.query[key]) {
+      req.query[key] = parseInt(req.query[key]);
     }
   });
-}
-  // Filter by catalog_id, category_id, subcategory_id
-  if (req.query.catalog_id) {
-    req.query.catalog_id = parseInt(req.query.catalog_id);
+
+  // Handle color filtering
+  if (req.query.color) {
+    const colors = req.query.color.split(",");
+    req.query["variants.color"] = { $in: colors };
   }
-  if (req.query.category_id) {
-    req.query.category_id = parseInt(req.query.category_id);
-  }
-  if (req.query.subcategory_id) {
-    req.query.subcategory_id = parseInt(req.query.subcategory_id);
+
+  // Handle size filtering
+  if (req.query.size) {
+    const sizes = req.query.size.split(",");
+    req.query["variants.size"] = { $in: sizes };
   }
 
   // Pagination (per_page, page)
-  if (req.query.page) {
-    req.query._page = req.query.page;
-  }
-  if (req.query.per_page) {
-    req.query._limit = req.query.per_page;
-  }
+  if (req.query.page) req.query._page = req.query.page;
+  if (req.query.per_page) req.query._limit = req.query.per_page;
 
   // Sorting
-  if (req.query.sort) {
-    req.query._sort = req.query.sort;
-  }
-  if (req.query.order) {
-    req.query._order = req.query.order || "asc";
+  if (req.query.sort) req.query._sort = req.query.sort;
+  if (req.query.order) req.query._order = req.query.order || "asc";
+
+  // Embed relationships for catalogs
+  if (req.path.includes("/catalogs") && req.query.category_id) {
+    const categoryId = parseInt(req.query.category_id);
+    const catalogs = router.db
+      .get("catalogs")
+      .filter((catalog) => catalog.category_id === categoryId)
+      .value();
+
+    return res.json(catalogs);
   }
 
   next();
 });
 
+// Use the router for all API routes
 server.use("/api", router);
+
 server.listen(3000, () => {
   console.log("JSON Server is running");
 });
 
 module.exports = server;
-
-// // See https://github.com/typicode/json-server#module
-// const jsonServer = require("json-server");
-
-// const server = jsonServer.create();
-
-// // Uncomment to allow write operations
-// // const fs = require('fs')
-// // const path = require('path')
-// // const filePath = path.join('db.json')
-// // const data = fs.readFileSync(filePath, "utf-8");
-// // const db = JSON.parse(data);
-// // const router = jsonServer.router(db)
-
-// // Comment out to allow write operations
-// const router = jsonServer.router("db.json");
-
-// const middlewares = jsonServer.defaults({ readOnly: true });
-
-// server.use(middlewares);
-// // Add this before server.use(router)
-// server.use(
-//   jsonServer.rewriter({
-//     "/api/*": "/$1",
-//     "/blog/:resource/:id/show": "/:resource/:id",
-//   })
-// );
-// server.use(router);
-// server.listen(3000, () => {
-//   console.log("JSON Server is running");
-// });
-
-// // Export the Server API
-// module.exports = server;
