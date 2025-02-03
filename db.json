@@ -638,7 +638,8 @@
                         "placeholder-black2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "The Cotton T-Shirt is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
         },
         {
             "id": 2,
@@ -702,7 +703,8 @@
                         "placeholder-gray2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "The Formal Shirt is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
         },
         {
             "id": 3,
@@ -766,7 +768,8 @@
                         "placeholder-brown-leather2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Stay warm and stylish with the Leather Jacket. Designed to protect you from the cold while looking your best."
         },
         {
             "id": 4,
@@ -794,7 +797,8 @@
                         "placeholder-gray-coat2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Stay warm and stylish with the Wool Coat. Designed to protect you from the cold while looking your best."
         },
         {
             "id": 5,
@@ -876,7 +880,8 @@
                         "placeholder-tan-boots2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "The Hiking Boots is ideal for outdoor adventures, combining durability with functional design to keep you prepared for any activity."
         },
         {
             "id": 6,
@@ -958,7 +963,8 @@
                         "placeholder-green-windbreaker2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "The Windbreaker Jacket is ideal for outdoor adventures, combining durability with functional design to keep you prepared for any activity."
         },
         {
             "id": 7,
@@ -1040,7 +1046,8 @@
                         "placeholder-black-shoes2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Enhance your performance with the Running Shoes, designed for active lifestyles and built to support your fitness goals."
         },
         {
             "id": 8,
@@ -1122,7 +1129,8 @@
                         "placeholder-blue-shorts2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Enhance your performance with the Gym Shorts, designed for active lifestyles and built to support your fitness goals."
         },
         {
             "id": 31,
@@ -1186,7 +1194,8 @@
                         "placeholder-black-backpack2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "The Hiking Backpack is ideal for outdoor adventures, combining durability with functional design to keep you prepared for any activity."
         },
         {
             "id": 32,
@@ -1268,7 +1277,8 @@
                         "placeholder-gray-boots2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "The Waterproof Hiking Boots is ideal for outdoor adventures, combining durability with functional design to keep you prepared for any activity."
         },
         {
             "id": 33,
@@ -1332,7 +1342,8 @@
                         "placeholder-black-jacket2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "The All-Weather Jacket is ideal for outdoor adventures, combining durability with functional design to keep you prepared for any activity."
         },
         {
             "id": 37,
@@ -1396,7 +1407,8 @@
                         "placeholder-gray-yogamat2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Enhance your performance with the Yoga Mat, designed for active lifestyles and built to support your fitness goals."
         },
         {
             "id": 38,
@@ -1433,7 +1445,8 @@
                         "placeholder-black-dumbbell2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Enhance your performance with the Dumbbell Set, designed for active lifestyles and built to support your fitness goals."
         },
         {
             "id": 39,
@@ -1524,7 +1537,8 @@
                         "placeholder-green-band2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Enhance your performance with the Resistance Bands, designed for active lifestyles and built to support your fitness goals."
         },
         {
             "id": 40,
@@ -1552,7 +1566,8 @@
                         "placeholder-black-wallet2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Elevate your outfit with the Leather Wallet. This accessory combines practicality with timeless elegance."
         },
         {
             "id": 41,
@@ -1598,7 +1613,8 @@
                         "placeholder-silver-watch2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Elevate your outfit with the Gold-Plated Watch. This accessory combines practicality with timeless elegance."
         },
         {
             "id": 42,
@@ -1626,7 +1642,8 @@
                         "placeholder-tortoise-sunglasses2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Elevate your outfit with the Designer Sunglasses. This accessory combines practicality with timeless elegance."
         },
         {
             "id": 49,
@@ -1744,7 +1761,8 @@
                         "placeholder-red-graphictee2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "The Graphic Tee is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
         },
         {
             "id": 50,
@@ -1808,7 +1826,8 @@
                         "placeholder-black-denimjacket2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "The Denim Jacket is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
         },
         {
             "id": 51,
@@ -1890,7 +1909,8 @@
                         "placeholder-navy-chinopants2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "The Chino Pants is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
         },
         {
             "id": 52,
@@ -1972,7 +1992,8 @@
                         "placeholder-navy-tailoredsuit2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Make a statement with the Tailored Suit. Perfect for formal occasions, offering sophistication and class."
         },
         {
             "id": 53,
@@ -2009,7 +2030,8 @@
                         "placeholder-black-silktie2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Make a statement with the Silk Tie. Perfect for formal occasions, offering sophistication and class."
         },
         {
             "id": 54,
@@ -2091,7 +2113,8 @@
                         "placeholder-lightblue-oxfordshirt2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Make a statement with the Oxford Shirt. Perfect for formal occasions, offering sophistication and class."
         },
         {
             "id": 49,
@@ -2209,7 +2232,8 @@
                         "placeholder-red-graphictee2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "The Graphic Tee is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
         },
         {
             "id": 50,
@@ -2273,7 +2297,8 @@
                         "placeholder-black-denimjacket2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "The Denim Jacket is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
         },
         {
             "id": 51,
@@ -2355,7 +2380,8 @@
                         "placeholder-navy-chinopants2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "The Chino Pants is perfect for everyday comfort and style. Made with high-quality materials to ensure durability and a great fit."
         },
         {
             "id": 52,
@@ -2437,7 +2463,8 @@
                         "placeholder-navy-tailoredsuit2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Make a statement with the Tailored Suit. Perfect for formal occasions, offering sophistication and class."
         },
         {
             "id": 53,
@@ -2474,7 +2501,8 @@
                         "placeholder-black-silktie2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Make a statement with the Silk Tie. Perfect for formal occasions, offering sophistication and class."
         },
         {
             "id": 54,
@@ -2556,7 +2584,8 @@
                         "placeholder-lightblue-oxfordshirt2.jpg"
                     ]
                 }
-            ]
+            ],
+            "description": "Make a statement with the Oxford Shirt. Perfect for formal occasions, offering sophistication and class."
         }
     ]
 }
