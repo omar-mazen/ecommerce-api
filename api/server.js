@@ -7,53 +7,51 @@ server.use(middlewares);
 
 // Custom query handling for filtering, pagination, sorting, and ranges
 server.use((req, res, next) => {
-  // Filters
+  // Remove underscores from query parameters
+  Object.keys(req.query).forEach((key) => {
+    const newKey = key.startsWith("_") ? key.slice(1) : key;
+    if (newKey !== key) {
+      req.query[newKey] = req.query[key];
+      delete req.query[key];
+    }
+  });
+
+  // Handle price range (e.g., price_gte, price_lte)
+  if (req.query.price_gte) {
+    req.query.price = { $gte: req.query.price_gte };
+    delete req.query.price_gte;
+  }
+  if (req.query.price_lte) {
+    req.query.price = { ...req.query.price, $lte: req.query.price_lte };
+    delete req.query.price_lte;
+  }
+
+  // Filter by catalog_id, category_id, subcategory_id
+  if (req.query.catalog_id) {
+    req.query.catalog_id = parseInt(req.query.catalog_id);
+  }
   if (req.query.category_id) {
     req.query.category_id = parseInt(req.query.category_id);
   }
-
-  // Pagination
-  if (req.query._page) {
-    req.query._page = req.query._page;
+  if (req.query.subcategory_id) {
+    req.query.subcategory_id = parseInt(req.query.subcategory_id);
   }
-  if (req.query._limit) {
-    req.query._limit = req.query._limit;
+
+  // Pagination (per_page, page)
+  if (req.query.page) {
+    req.query._page = req.query.page;
+  }
+  if (req.query.per_page) {
+    req.query._limit = req.query.per_page;
   }
 
   // Sorting
-  if (req.query._sort) {
-    req.query._sort = req.query._sort;
+  if (req.query.sort) {
+    req.query._sort = req.query.sort;
   }
-  if (req.query._order) {
-    req.query._order = req.query._order || "asc";
+  if (req.query.order) {
+    req.query._order = req.query.order || "asc";
   }
-
-  // Range conditions
-  if (req.query._start) {
-    req.query._start = parseInt(req.query._start);
-  }
-  if (req.query._end) {
-    req.query._end = parseInt(req.query._end);
-  }
-
-  // Other operators like 'lt', 'gt', etc.
-  Object.keys(req.query).forEach((key) => {
-    if (key.includes("_lt")) {
-      req.query[key.replace("_lt", "")] = { $lt: req.query[key] };
-    }
-    if (key.includes("_lte")) {
-      req.query[key.replace("_lte", "")] = { $lte: req.query[key] };
-    }
-    if (key.includes("_gt")) {
-      req.query[key.replace("_gt", "")] = { $gt: req.query[key] };
-    }
-    if (key.includes("_gte")) {
-      req.query[key.replace("_gte", "")] = { $gte: req.query[key] };
-    }
-    if (key.includes("_ne")) {
-      req.query[key.replace("_ne", "")] = { $ne: req.query[key] };
-    }
-  });
 
   next();
 });
