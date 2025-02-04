@@ -58,7 +58,25 @@ server.use((req, res, next) => {
     req.query._order = req.query.order || "asc";
   }
 
- if (req.query.group_by && ["catalog_id", "subcategory_id", "category_id"].includes(req.query.group_by)) {
+  // Embed Category for Subcategory
+  if (req.query._embed === "category" && req.path.includes("/subcategories")) {
+    req.query._expand = "category";
+  }
+
+  // Embed Subcategory and Category for Catalog
+  if (
+    req.query._embed === "subcategory,category" &&
+    req.path.includes("/catalogs")
+  ) {
+    req.query._expand = "subcategory,category";
+  }
+
+  // Handle group by
+
+  if (
+    req.query.group_by &&
+    ["catalog_id", "subcategory_id", "category_id"].includes(req.query.group_by)
+  ) {
     const data = router.db.get(req.path.replace("/api/", "")).value();
 
     const groupedData = data.reduce((acc, item) => {
@@ -68,7 +86,7 @@ server.use((req, res, next) => {
           const groupName = getGroupNameById(req.query.group_by, key);
           acc[key] = {
             id: key,
-            name: groupName || `Unknown ${req.query.group_by.replace("_id", "")}`,
+            name: groupName || `Unknown ${req.query.group_by}`,
             items: [],
           };
         }
@@ -82,7 +100,6 @@ server.use((req, res, next) => {
 
   next();
 });
-
 // Helper function to get group names based on ID
 function getGroupNameById(groupType, id) {
   const collectionMap = {
