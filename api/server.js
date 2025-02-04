@@ -5,7 +5,7 @@ const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 
-// Middleware for custom query handling, filtering, sorting, pagination, grouping, and embedding
+// Middleware for custom query handling, filtering, sorting, pagination, and grouping
 server.use((req, res, next) => {
   // Normalize query parameters by removing underscores
   Object.keys(req.query).forEach((key) => {
@@ -34,7 +34,19 @@ server.use((req, res, next) => {
     const sizes = req.query.size.split(",");
     req.query.size = (value) => sizes.includes(value);
   }
+  
+  if (req.path.includes("/catalogs")) {
+  if (req.query.subcategory_id) {
+    const subcategoryId = parseInt(req.query.subcategory_id);
+    req.query.subcategory_id = (value) => value === subcategoryId;
+  }
+  if (req.query.category_id) {
+    const categoryId = parseInt(req.query.category_id);
+    req.query.category_id = (value) => value === categoryId;
+  }
+}
 
+  
   // Convert numeric query parameters
   ["catalog_id", "category_id", "subcategory_id"].forEach((param) => {
     if (req.query[param]) {
@@ -58,39 +70,7 @@ server.use((req, res, next) => {
     req.query._order = req.query.order || "asc";
   }
 
-  // Embed handling for category and/or subcategory
-  if (req.path.includes("/catalogs") && req.query.embed) {
-    const embeds = req.query.embed.split(",");
-    let data = router.db.get("catalogs").value();
-
-    data = data.map((catalog) => {
-      embeds.forEach((relation) => {
-        if (relation === "category") {
-          catalog.category =
-            router.db
-              .get("categories")
-              .find({ id: catalog.category_id })
-              .value() || null;
-        }
-        if (relation === "subcategory") {
-          catalog.subcategory =
-            router.db
-              .get("subcategories")
-              .find({ id: catalog.subcategory_id })
-              .value() || null;
-        }
-      });
-      return catalog;
-    });
-
-    return res.json(data);
-  }
-
-  // Handle group by
-  if (
-    req.query.group_by &&
-    ["catalog_id", "subcategory_id", "category_id"].includes(req.query.group_by)
-  ) {
+ if (req.query.group_by && ["catalog_id", "subcategory_id", "category_id"].includes(req.query.group_by)) {
     const data = router.db.get(req.path.replace("/api/", "")).value();
 
     const groupedData = data.reduce((acc, item) => {
@@ -100,7 +80,7 @@ server.use((req, res, next) => {
           const groupName = getGroupNameById(req.query.group_by, key);
           acc[key] = {
             id: key,
-            name: groupName || `Unknown ${req.query.group_by}`,
+            name: groupName || `Unknown ${req.query.group_by.replace("_id", "")}`,
             items: [],
           };
         }
