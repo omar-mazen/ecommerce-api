@@ -5,8 +5,14 @@ const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 
+// Middleware for handling query normalization and custom operations
 server.use((req, res, next) => {
-  // Normalize query parameters
+  // Remove trailing slashes from the request path
+  if (req.path.endsWith("/")) {
+    req.url = req.url.slice(0, -1);
+  }
+
+  // Normalize query parameters by removing underscores
   Object.keys(req.query).forEach((key) => {
     const newKey = key.startsWith("_") ? key.slice(1) : key;
     if (newKey !== key) {
@@ -15,6 +21,25 @@ server.use((req, res, next) => {
     }
   });
 
+  // Price range filter handling
+  if (req.query.price_gte || req.query.price_lte) {
+    const priceGte = parseFloat(req.query.price_gte) || -Infinity;
+    const priceLte = parseFloat(req.query.price_lte) || Infinity;
+    req.query.price = (value) => value >= priceGte && value <= priceLte;
+  }
+
+  // Filter by color
+  if (req.query.color) {
+    const colors = req.query.color.split(",");
+    req.query.color = (value) => colors.includes(value);
+  }
+
+  // Filter by size
+  if (req.query.size) {
+    const sizes = req.query.size.split(",");
+    req.query.size = (value) => sizes.includes(value);
+  }
+
   // Convert numeric query parameters
   ["catalog_id", "category_id", "subcategory_id"].forEach((param) => {
     if (req.query[param]) {
@@ -22,25 +47,39 @@ server.use((req, res, next) => {
     }
   });
 
-  // Apply filters before grouping or response
-  const data = router.db.get(req.path.replace("/api/", "")).value();
-  let filteredData = data;
-
-  if (req.query.category_id) {
-    filteredData = filteredData.filter(
-      (item) => item.category_id === req.query.category_id
-    );
+  // Handle pagination
+  if (req.query.page) {
+    req.query._page = req.query.page;
+  }
+  if (req.query.per_page) {
+    req.query._limit = req.query.per_page;
   }
 
-  if (req.query.subcategory_id) {
-    filteredData = filteredData.filter(
-      (item) => item.subcategory_id === req.query.subcategory_id
-    );
+  // Handle sorting
+  if (req.query.sort) {
+    req.query._sort = req.query.sort;
+  }
+  if (req.query.order) {
+    req.query._order = req.query.order || "asc";
   }
 
-  // Grouping support
-  if (req.query.group_by) {
-    const groupedData = filteredData.reduce((acc, item) => {
+  // Handle _embed query
+  if (req.query.embed) {
+    const embedParams = req.query.embed.split(",");
+
+    embedParams.forEach((param) => {
+      req.query._expand = param.trim();
+    });
+  }
+
+  // Handle group by
+  if (
+    req.query.group_by &&
+    ["catalog_id", "subcategory_id", "category_id"].includes(req.query.group_by)
+  ) {
+    const data = router.db.get(req.path.replace("/api/", "")).value();
+
+    const groupedData = data.reduce((acc, item) => {
       const key = item[req.query.group_by];
       if (key !== undefined) {
         if (!acc[key]) {
@@ -55,27 +94,10 @@ server.use((req, res, next) => {
       }
       return acc;
     }, {});
+
     return res.json(Object.values(groupedData));
   }
 
-  // Sorting
-  if (req.query.sort) {
-    filteredData.sort((a, b) =>
-      req.query.order === "desc"
-        ? b[req.query.sort] - a[req.query.sort]
-        : a[req.query.sort] - b[req.query.sort]
-    );
-  }
-
-  // Pagination
-  if (req.query.page && req.query.per_page) {
-    const page = parseInt(req.query.page);
-    const limit = parseInt(req.query.per_page);
-    const start = (page - 1) * limit;
-    filteredData = filteredData.slice(start, start + limit);
-  }
-
-  res.json(filteredData);
   next();
 });
 
@@ -92,6 +114,7 @@ function getGroupNameById(groupType, id) {
   return record ? record.name : `Unknown ${collection}`;
 }
 
+// Route all API requests through /api
 server.use("/api", router);
 
 server.listen(3000, () => {
