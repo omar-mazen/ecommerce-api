@@ -21,6 +21,13 @@ server.use((req, res, next) => {
     }
   });
 
+  // Handle numeric filtering for category_id and subcategory_id
+  ["catalog_id", "category_id", "subcategory_id"].forEach((param) => {
+    if (req.query[param]) {
+      req.query[param] = parseInt(req.query[param]);
+    }
+  });
+
   // Price range filter handling
   if (req.query.price_gte || req.query.price_lte) {
     const priceGte = parseFloat(req.query.price_gte) || -Infinity;
@@ -39,13 +46,6 @@ server.use((req, res, next) => {
     const sizes = req.query.size.split(",");
     req.query.size = (value) => sizes.includes(value);
   }
-
-  // Convert numeric query parameters
-  ["catalog_id", "category_id", "subcategory_id"].forEach((param) => {
-    if (req.query[param]) {
-      req.query[param] = parseInt(req.query[param]);
-    }
-  });
 
   // Handle pagination
   if (req.query.page) {
@@ -66,42 +66,56 @@ server.use((req, res, next) => {
   // Handle _embed query
   if (req.query.embed) {
     const embedParams = req.query.embed.split(",");
-
     embedParams.forEach((param) => {
       req.query._expand = param.trim();
     });
   }
 
-  // Handle group by
-  if (
-    req.query.group_by &&
-    ["catalog_id", "subcategory_id", "category_id"].includes(req.query.group_by)
-  ) {
-    const data = router.db.get(req.path.replace("/api/", "")).value();
+  // Fetch and filter data manually for custom cases
+  if (req.query.group_by || req.query.category_id || req.query.subcategory_id) {
+    const resource = req.path.replace("/api/", "");
+    let data = router.db.get(resource).value();
 
-    const groupedData = data.reduce((acc, item) => {
-      const key = item[req.query.group_by];
+    // Apply category and subcategory filters
+    if (req.query.category_id) {
+      data = data.filter(item => item.category_id === req.query.category_id);
+    }
+    if (req.query.subcategory_id) {
+      data = data.filter(item => item.subcategory_id === req.query.subcategory_id);
+    }
+
+    // Handle grouping if requested
+    if (req.query.group_by) {
+      data = groupData(data, req.query.group_by);
+    }
+
+    return res.json(data);
+  }
+
+  next();
+});
+
+// Helper for grouping data
+function groupData(data, groupByKey) {
+  return Object.values(
+    data.reduce((acc, item) => {
+      const key = item[groupByKey];
       if (key !== undefined) {
         if (!acc[key]) {
-          const groupName = getGroupNameById(req.query.group_by, key);
           acc[key] = {
             id: key,
-            name: groupName || `Unknown ${req.query.group_by}`,
+            name: getGroupNameById(groupByKey, key) || `Unknown ${groupByKey}`,
             items: [],
           };
         }
         acc[key].items.push(item);
       }
       return acc;
-    }, {});
+    }, {})
+  );
+}
 
-    return res.json(Object.values(groupedData));
-  }
-
-  next();
-});
-
-// Helper function to get group names based on ID
+// Helper for getting group names
 function getGroupNameById(groupType, id) {
   const collectionMap = {
     catalog_id: "catalogs",
