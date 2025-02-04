@@ -5,8 +5,8 @@ const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 
-// Middleware for custom query handling, filtering, sorting, and grouping
 server.use((req, res, next) => {
+  // Normalize query parameters
   Object.keys(req.query).forEach((key) => {
     const newKey = key.startsWith("_") ? key.slice(1) : key;
     if (newKey !== key) {
@@ -15,12 +15,21 @@ server.use((req, res, next) => {
     }
   });
 
+  // Handle price range filtering
   if (req.query.price_gte || req.query.price_lte) {
     const priceGte = parseFloat(req.query.price_gte) || -Infinity;
     const priceLte = parseFloat(req.query.price_lte) || Infinity;
     req.query.price = (value) => value >= priceGte && value <= priceLte;
   }
 
+  // Convert numeric query parameters
+  ["catalog_id", "category_id", "subcategory_id"].forEach((param) => {
+    if (req.query[param]) {
+      req.query[param] = parseInt(req.query[param]);
+    }
+  });
+
+  // Handle filtering by color and size
   if (req.query.color) {
     const colors = req.query.color.split(",");
     req.query.color = (value) => colors.includes(value);
@@ -31,19 +40,7 @@ server.use((req, res, next) => {
     req.query.size = (value) => sizes.includes(value);
   }
 
-  ["catalog_id", "category_id", "subcategory_id"].forEach((param) => {
-    if (req.query[param]) {
-      req.query[param] = parseInt(req.query[param]);
-    }
-  });
-
-  if (req.query.page) {
-    req.query._page = req.query.page;
-  }
-  if (req.query.per_page) {
-    req.query._limit = req.query.per_page;
-  }
-
+  // Sorting
   if (req.query.sort) {
     req.query._sort = req.query.sort;
   }
@@ -51,24 +48,40 @@ server.use((req, res, next) => {
     req.query._order = req.query.order || "asc";
   }
 
-  // Embed handling
-  if (req.query.embed) {
-    const embedEntities = req.query.embed.split(",");
-    embedEntities.forEach((entity) => {
-      if (entity && req.path.includes("/catalogs")) {
-        req.query._expand = entity;
-      }
-    });
+  // Pagination
+  if (req.query.page) {
+    req.query._page = req.query.page;
+  }
+  if (req.query.per_page) {
+    req.query._limit = req.query.per_page;
   }
 
-  // Handle group by
-  if (
-    req.query.group_by &&
-    ["catalog_id", "subcategory_id", "category_id"].includes(req.query.group_by)
-  ) {
+  // Grouping with filtering and sorting
+  if (req.query.group_by) {
     const data = router.db.get(req.path.replace("/api/", "")).value();
 
-    const groupedData = data.reduce((acc, item) => {
+    // Apply filters before grouping
+    let filteredData = data;
+
+    if (req.query.category_id) {
+      filteredData = filteredData.filter(
+        (item) => item.category_id === req.query.category_id
+      );
+    }
+
+    if (req.query.subcategory_id) {
+      filteredData = filteredData.filter(
+        (item) => item.subcategory_id === req.query.subcategory_id
+      );
+    }
+
+    if (req.query.price) {
+      filteredData = filteredData.filter((item) =>
+        req.query.price(item.price)
+      );
+    }
+
+    const groupedData = filteredData.reduce((acc, item) => {
       const key = item[req.query.group_by];
       if (key !== undefined) {
         if (!acc[key]) {
@@ -84,37 +97,19 @@ server.use((req, res, next) => {
       return acc;
     }, {});
 
-    return res.json(Object.values(groupedData));
-  }
+    const sortedGroupedData = Object.values(groupedData).sort((a, b) =>
+      req.query._order === "desc"
+        ? b.id - a.id
+        : a.id - b.id
+    );
 
-  // Filtering catalogs by category_id or subcategory_id
-  if (req.path.includes("/catalogs")) {
-    if (req.query.category_id || req.query.subcategory_id) {
-      const data = router.db.get("catalogs").value();
-
-      let filteredData = data;
-
-      if (req.query.category_id) {
-        const categoryId = parseInt(req.query.category_id);
-        filteredData = filteredData.filter(
-          (catalog) => catalog.category_id === categoryId
-        );
-      }
-
-      if (req.query.subcategory_id) {
-        const subcategoryId = parseInt(req.query.subcategory_id);
-        filteredData = filteredData.filter(
-          (catalog) => catalog.subcategory_id === subcategoryId
-        );
-      }
-
-      return res.json(filteredData);
-    }
+    return res.json(sortedGroupedData);
   }
 
   next();
 });
 
+// Helper function to get group names based on ID
 function getGroupNameById(groupType, id) {
   const collectionMap = {
     catalog_id: "catalogs",
