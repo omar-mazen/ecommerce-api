@@ -5,7 +5,7 @@ const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 
-// Middleware for custom query handling, filtering, sorting, pagination, and grouping
+// Middleware for custom query handling, filtering, sorting, pagination, grouping, and embedding
 server.use((req, res, next) => {
   // Normalize query parameters by removing underscores
   Object.keys(req.query).forEach((key) => {
@@ -58,21 +58,35 @@ server.use((req, res, next) => {
     req.query._order = req.query.order || "asc";
   }
 
-  // Embed Category for Subcategory
-  if (req.query._embed === "category" && req.path.includes("/subcategories")) {
-    req.query._expand = "category";
-  }
+  // Embed handling for category and/or subcategory
+  if (req.path.includes("/catalogs") && req.query.embed) {
+    const embeds = req.query.embed.split(",");
+    let data = router.db.get("catalogs").value();
 
-  // Embed Subcategory and Category for Catalog
-  if (
-    req.query._embed === "subcategory,category" &&
-    req.path.includes("/catalogs")
-  ) {
-    req.query._expand = "subcategory,category";
+    data = data.map((catalog) => {
+      embeds.forEach((relation) => {
+        if (relation === "category") {
+          catalog.category =
+            router.db
+              .get("categories")
+              .find({ id: catalog.category_id })
+              .value() || null;
+        }
+        if (relation === "subcategory") {
+          catalog.subcategory =
+            router.db
+              .get("subcategories")
+              .find({ id: catalog.subcategory_id })
+              .value() || null;
+        }
+      });
+      return catalog;
+    });
+
+    return res.json(data);
   }
 
   // Handle group by
-
   if (
     req.query.group_by &&
     ["catalog_id", "subcategory_id", "category_id"].includes(req.query.group_by)
@@ -100,6 +114,7 @@ server.use((req, res, next) => {
 
   next();
 });
+
 // Helper function to get group names based on ID
 function getGroupNameById(groupType, id) {
   const collectionMap = {
