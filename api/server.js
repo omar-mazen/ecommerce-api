@@ -15,13 +15,6 @@ server.use((req, res, next) => {
     }
   });
 
-  // Handle price range filtering
-  if (req.query.price_gte || req.query.price_lte) {
-    const priceGte = parseFloat(req.query.price_gte) || -Infinity;
-    const priceLte = parseFloat(req.query.price_lte) || Infinity;
-    req.query.price = (value) => value >= priceGte && value <= priceLte;
-  }
-
   // Convert numeric query parameters
   ["catalog_id", "category_id", "subcategory_id"].forEach((param) => {
     if (req.query[param]) {
@@ -29,58 +22,24 @@ server.use((req, res, next) => {
     }
   });
 
-  // Handle filtering by color and size
-  if (req.query.color) {
-    const colors = req.query.color.split(",");
-    req.query.color = (value) => colors.includes(value);
+  // Apply filters before grouping or response
+  const data = router.db.get(req.path.replace("/api/", "")).value();
+  let filteredData = data;
+
+  if (req.query.category_id) {
+    filteredData = filteredData.filter(
+      (item) => item.category_id === req.query.category_id
+    );
   }
 
-  if (req.query.size) {
-    const sizes = req.query.size.split(",");
-    req.query.size = (value) => sizes.includes(value);
+  if (req.query.subcategory_id) {
+    filteredData = filteredData.filter(
+      (item) => item.subcategory_id === req.query.subcategory_id
+    );
   }
 
-  // Sorting
-  if (req.query.sort) {
-    req.query._sort = req.query.sort;
-  }
-  if (req.query.order) {
-    req.query._order = req.query.order || "asc";
-  }
-
-  // Pagination
-  if (req.query.page) {
-    req.query._page = req.query.page;
-  }
-  if (req.query.per_page) {
-    req.query._limit = req.query.per_page;
-  }
-
-  // Grouping with filtering and sorting
+  // Grouping support
   if (req.query.group_by) {
-    const data = router.db.get(req.path.replace("/api/", "")).value();
-
-    // Apply filters before grouping
-    let filteredData = data;
-
-    if (req.query.category_id) {
-      filteredData = filteredData.filter(
-        (item) => item.category_id === req.query.category_id
-      );
-    }
-
-    if (req.query.subcategory_id) {
-      filteredData = filteredData.filter(
-        (item) => item.subcategory_id === req.query.subcategory_id
-      );
-    }
-
-    if (req.query.price) {
-      filteredData = filteredData.filter((item) =>
-        req.query.price(item.price)
-      );
-    }
-
     const groupedData = filteredData.reduce((acc, item) => {
       const key = item[req.query.group_by];
       if (key !== undefined) {
@@ -96,16 +55,27 @@ server.use((req, res, next) => {
       }
       return acc;
     }, {});
-
-    const sortedGroupedData = Object.values(groupedData).sort((a, b) =>
-      req.query._order === "desc"
-        ? b.id - a.id
-        : a.id - b.id
-    );
-
-    return res.json(sortedGroupedData);
+    return res.json(Object.values(groupedData));
   }
 
+  // Sorting
+  if (req.query.sort) {
+    filteredData.sort((a, b) =>
+      req.query.order === "desc"
+        ? b[req.query.sort] - a[req.query.sort]
+        : a[req.query.sort] - b[req.query.sort]
+    );
+  }
+
+  // Pagination
+  if (req.query.page && req.query.per_page) {
+    const page = parseInt(req.query.page);
+    const limit = parseInt(req.query.per_page);
+    const start = (page - 1) * limit;
+    filteredData = filteredData.slice(start, start + limit);
+  }
+
+  res.json(filteredData);
   next();
 });
 
